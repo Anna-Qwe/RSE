@@ -1,0 +1,18 @@
+﻿<Window x:Class="RSE.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RSE"
+        mc:Ignorable="d"
+        Title="RSE" Height="173" Width="290" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="250" MaxHeight="400" Background="LightBlue"  MinWidth="290" MinHeight="160">
+    <Grid Margin="0,1,-7.667,-111" Height="254" VerticalAlignment="Top" HorizontalAlignment="Left" Width="291">
+        <Label x:Name="LoginL" Content="Login" Margin="10,30,0,0" VerticalAlignment="Top" Height="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="70" HorizontalAlignment="Left" Foreground="Black"/>
+        <TextBox x:Name="Login" Height="30" Margin="85,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="100" HorizontalAlignment="Left"/>
+        <Label x:Name="PasswordL" Content="Password" Margin="10,85,0,0" VerticalAlignment="Top" Height="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="70" HorizontalAlignment="Left"/>
+        <PasswordBox x:Name="Password" HorizontalAlignment="Left" Margin="85,85,0,0" VerticalAlignment="Top" Width="100" Height="30" VerticalContentAlignment="Center"/>
+        <Button x:Name="Login1" Content="Login" Margin="190,30,0,0" VerticalAlignment="Top" Click="LoginButton_Click" Height="30" HorizontalAlignment="Left" Width="75"/>
+        <Button x:Name="Guest" Content="Guest" Margin="190,85,0,0" VerticalAlignment="Top" Click="LoginButton_Click" Height="30" HorizontalAlignment="Left" Width="75"/>
+
+    </Grid>
+</Window>
