@@ -72,9 +72,6 @@
     <Compile Include="Task2.xaml.cs">
       <DependentUpon>Task2.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Task4.xaml.cs">
-      <DependentUpon>Task4.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Task5.xaml.cs">
       <DependentUpon>Task5.xaml</DependentUpon>
     </Compile>
@@ -130,10 +127,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Task2.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Task4.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
