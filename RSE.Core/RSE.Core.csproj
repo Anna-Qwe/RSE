@@ -82,10 +82,6 @@
     <Compile Include="Migrations\201806091730576_iml.Designer.cs">
       <DependentUpon>201806091730576_iml.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201806091733058_nb.cs" />
-    <Compile Include="Migrations\201806091733058_nb.Designer.cs">
-      <DependentUpon>201806091733058_nb.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Exercise.cs" />
     <Compile Include="Models\FullINfo.cs" />
@@ -120,9 +116,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806091730576_iml.resx">
       <DependentUpon>201806091730576_iml.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806091733058_nb.resx">
-      <DependentUpon>201806091733058_nb.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
