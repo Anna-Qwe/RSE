@@ -23,5 +23,12 @@ namespace RSE
         {
             InitializeComponent();
         }
+
+        internal void OpenVariant(int variantId)
+        {
+            Task1 taskWindow = new Task1(variantId);
+            taskWindow.InitializeComponent();
+            taskWindow.Show();
+        }
     }
 }
