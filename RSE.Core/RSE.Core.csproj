@@ -57,18 +57,38 @@
     <Compile Include="Migrations\201806062219361_newstart.Designer.cs">
       <DependentUpon>201806062219361_newstart.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Answer.cs" />
+    <Compile Include="Migrations\201806072046537_exer.cs" />
+    <Compile Include="Migrations\201806072046537_exer.Designer.cs">
+      <DependentUpon>201806072046537_exer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806072116335_new.cs" />
+    <Compile Include="Migrations\201806072116335_new.Designer.cs">
+      <DependentUpon>201806072116335_new.cs</DependentUpon>
+    </Compile>
     <Compile Include="Context.cs" />
     <Compile Include="Migrations\201806062132441_start.cs" />
     <Compile Include="Migrations\201806062132441_start.Designer.cs">
       <DependentUpon>201806062132441_start.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201806062134323_prop.cs" />
-    <Compile Include="Migrations\201806062134323_prop.Designer.cs">
-      <DependentUpon>201806062134323_prop.cs</DependentUpon>
+    <Compile Include="Migrations\201806091711580_as.cs" />
+    <Compile Include="Migrations\201806091711580_as.Designer.cs">
+      <DependentUpon>201806091711580_as.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806091716315_img.cs" />
+    <Compile Include="Migrations\201806091716315_img.Designer.cs">
+      <DependentUpon>201806091716315_img.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806091730576_iml.cs" />
+    <Compile Include="Migrations\201806091730576_iml.Designer.cs">
+      <DependentUpon>201806091730576_iml.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806091733058_nb.cs" />
+    <Compile Include="Migrations\201806091733058_nb.Designer.cs">
+      <DependentUpon>201806091733058_nb.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Exercise.cs" />
+    <Compile Include="Models\FullINfo.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\Variant.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -76,21 +96,35 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Data\data.json" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201806062132441_start.resx">
       <DependentUpon>201806062132441_start.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806062134323_prop.resx">
-      <DependentUpon>201806062134323_prop.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806062219361_newstart.resx">
       <DependentUpon>201806062219361_newstart.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806072046537_exer.resx">
+      <DependentUpon>201806072046537_exer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806072116335_new.resx">
+      <DependentUpon>201806072116335_new.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806091711580_as.resx">
+      <DependentUpon>201806091711580_as.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806091716315_img.resx">
+      <DependentUpon>201806091716315_img.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806091730576_iml.resx">
+      <DependentUpon>201806091730576_iml.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806091733058_nb.resx">
+      <DependentUpon>201806091733058_nb.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -7,13 +7,13 @@ namespace RSE.Core.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class prop : IMigrationMetadata
+    public sealed partial class _as : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(prop));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(_as));
         
         string IMigrationMetadata.Id
         {
-            get { return "201806062134323_prop"; }
+            get { return "201806091711580_as"; }
         }
         
         string IMigrationMetadata.Source

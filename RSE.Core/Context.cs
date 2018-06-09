@@ -13,8 +13,12 @@ namespace RSE.Core
         public DbSet<User> Users { get; set; }
         public DbSet<Variant> Variants { get; set; }
         public DbSet<Exercise> Exercises { get; set; }
-        public DbSet<Answer> Answers { get; set; }
         public Context () : base ("TeamDB")
         { }
+
+        public Context(DbSet<Exercise> exercises)
+        {
+            Exercises = exercises;
+        }
     }
 }

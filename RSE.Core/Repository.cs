@@ -13,6 +13,10 @@ namespace RSE.Core
     {
         Context context = new Context();
 
+        public IEnumerable<Exercise> Exercises { get { return context.Exercises;  } }
+        public IEnumerable<Variant> Variants { get { return context.Variants; } }
+       
+
         private User _authorizedUser;
 
         public object PasswordHelpers { get; private set; }

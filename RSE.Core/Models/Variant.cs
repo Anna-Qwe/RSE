@@ -10,5 +10,7 @@ namespace RSE.Core.Models
     {
         public int Id { get; set; }
         public int Name { get; set; }
+
+        public List<Exercise> Exercises { get; set; }
     }
 }

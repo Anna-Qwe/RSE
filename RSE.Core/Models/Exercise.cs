@@ -9,10 +9,10 @@ namespace RSE.Core.Models
     class Exercise
     {
         public int Id { get; set; }
+        public Variant Variant { get; set; }
         public int Number { get; set; }
         public string Description { get; set; }
-        public Variant Variant { get; set; }
-     
-
+        public int Answer { get; set; }
+        public string ImgURL { get; set; }
     }
 }

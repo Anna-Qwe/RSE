@@ -3,7 +3,7 @@ namespace RSE.Core.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class prop : DbMigration
+    public partial class nb : DbMigration
     {
         public override void Up()
         {
