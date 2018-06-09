@@ -67,6 +67,7 @@
     <Compile Include="Finish.xaml.cs">
       <DependentUpon>Finish.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Programs.cs" />
     <Compile Include="Task1.xaml.cs">
       <DependentUpon>Task1.xaml</DependentUpon>
     </Compile>
@@ -127,6 +128,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="image\dpmgISXHSUk.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RSE.Core\RSE.Core.csproj">
+      <Project>{5400e42a-25e9-4349-9d44-0db7fe137b7d}</Project>
+      <Name>RSE.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace RSE.Core
 {
-    class Repository : IRepository
+    public class Repository : IRepository
     {
         Context context = new Context();
 

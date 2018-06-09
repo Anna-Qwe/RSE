@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace RSE.Core.Interfaces
 {
-    interface IRepository
+    public interface IRepository
     {
         IEnumerable<Exercise> Exercises { get; }
         IEnumerable<Variant> Variants { get; }

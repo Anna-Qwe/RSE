@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace RSE.Core
 {
-    class Factory
+    public class Factory
     {
         private static Factory _instance;
 
