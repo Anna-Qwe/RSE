@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RSE.Core.Models
 {
-    class FullINfo
+    public class FullINfo
     {
         public int Id { get; set; }
         public Exercise Exercise { get; set; }
