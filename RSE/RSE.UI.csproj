@@ -127,9 +127,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="image\dpmgISXHSUk.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\RSE.Core\RSE.Core.csproj">
       <Project>{5400e42a-25e9-4349-9d44-0db7fe137b7d}</Project>
       <Name>RSE.Core</Name>
