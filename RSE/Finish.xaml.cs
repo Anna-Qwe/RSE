@@ -23,7 +23,7 @@ namespace RSE
         public Finish(bool[] correctAnswers)
         {
             InitializeComponent();
-            answer.Text = correctAnswers.Where(a => a).Count().ToString();
+            TextBox_Answer.Text = correctAnswers.Where(a => a).Count().ToString();
         }
     }
 }

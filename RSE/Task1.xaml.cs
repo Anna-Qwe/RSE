@@ -24,7 +24,7 @@ namespace RSE
         Variant variant;
         int curTaskId = 0;
         Exercise curTask;
-        static bool[] answers = new bool[12];
+        bool[] answers = new bool[12];
         public Task1(int variantId)
         {
             var repo = Factory.Instance.GetRepository();
