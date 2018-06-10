@@ -64,22 +64,22 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Finish.xaml.cs">
-      <DependentUpon>Finish.xaml</DependentUpon>
+    <Compile Include="FinishWindow.xaml.cs">
+      <DependentUpon>FinishWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Programs.cs" />
-    <Compile Include="Task1.xaml.cs">
-      <DependentUpon>Task1.xaml</DependentUpon>
+    <Compile Include="TasksWindow.xaml.cs">
+      <DependentUpon>TasksWindow.xaml</DependentUpon>
     </Compile>
-    <Page Include="choose variant.xaml">
+    <Page Include="ChooseVariant.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Finish.xaml">
+    <Page Include="FinishWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
+    <Page Include="LogInWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -87,14 +87,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="choose variant.xaml.cs">
-      <DependentUpon>choose variant.xaml</DependentUpon>
+    <Compile Include="ChooseVariant.xaml.cs">
+      <DependentUpon>ChooseVariant.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
+    <Compile Include="LogInWindow.xaml.cs">
+      <DependentUpon>LogInWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Task1.xaml">
+    <Page Include="TasksWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

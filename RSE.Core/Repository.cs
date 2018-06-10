@@ -16,6 +16,20 @@ namespace RSE.Core
         public IEnumerable<Exercise> Exercises { get { return context.Exercises;  } }
         public IEnumerable<Variant> Variants { get { return context.Variants; } }
        
+        public List<int> WrongAnswers (int answer, int numbOfTask,  Variant variant)
+        {
+            List<int> WrongAnswers = new List<int>();
+            int CountOfWrongAnswers;
+
+            Exercise task = context.Exercises.SingleOrDefault(x => x.Variant == variant && x.Number == numbOfTask && x.Answer == answer);
+            if ( task.Answer != answer)
+            {
+                WrongAnswers.Add(answer);
+                CountOfWrongAnswers = WrongAnswers.Count();
+            }
+            return WrongAnswers;
+           
+        }
 
         private User _authorizedUser;
 
