@@ -97,5 +97,10 @@ namespace RSE
             finish.InitializeComponent();
             finish.Show();
         }
+
+        private void Answer_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

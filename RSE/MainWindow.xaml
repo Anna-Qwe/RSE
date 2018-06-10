@@ -5,14 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RSE"
         mc:Ignorable="d"
-        Title="RSE" Height="173" Width="290" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="250" MaxHeight="400" Background="LightBlue"  MinWidth="290" MinHeight="160">
-    <Grid Margin="0,1,-7.667,-111" Height="254" VerticalAlignment="Top" HorizontalAlignment="Left" Width="291">
-        <Label x:Name="LoginL" Content="Login" Margin="10,30,0,0" VerticalAlignment="Top" Height="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="70" HorizontalAlignment="Left" Foreground="Black"/>
-        <TextBox x:Name="Login" Height="30" Margin="85,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="100" HorizontalAlignment="Left"/>
-        <Label x:Name="PasswordL" Content="Password" Margin="10,85,0,0" VerticalAlignment="Top" Height="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="70" HorizontalAlignment="Left"/>
-        <PasswordBox x:Name="Password" HorizontalAlignment="Left" Margin="85,85,0,0" VerticalAlignment="Top" Width="100" Height="30" VerticalContentAlignment="Center"/>
-        <Button x:Name="Login1" Content="Login" Margin="190,30,0,0" VerticalAlignment="Top" Click="LoginButton_Click" Height="30" HorizontalAlignment="Left" Width="75"/>
-        <Button x:Name="Guest" Content="Guest" Margin="190,85,0,0" VerticalAlignment="Top" Click="LoginButton_Click" Height="30" HorizontalAlignment="Left" Width="75"/>
+        Height="390" Width="290" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="250" MaxHeight="400" Background="LightSeaGreen"  MinWidth="290" MinHeight="160" >
+    <Grid Margin="0,1,-21.667,-9.333" Height="369" VerticalAlignment="Top" HorizontalAlignment="Left" Width="305">
+        <Image Stretch="None" Source="http://uv-kurier.ru/wp-content/uploads/2018/04/matematika-b-2-1024x735.jpg" Margin="0,-54,23,10" />
+
+        <Label x:Name="Label_Login" Content="Login" Margin="10,222,0,0" VerticalAlignment="Top" Height="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="70" HorizontalAlignment="Left" Foreground="White" FontFamily="Comic Sans Ms" FontSize="14"/>
+        <Label x:Name="Label_Name" Content="Russian State Exam" Margin="10,46,0,0" VerticalAlignment="Top" Height="93" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="263" HorizontalAlignment="Left" Background="White" Foreground="DarkGreen" FontFamily="Comic Sans Ms" FontSize="25"/>
+        <TextBox x:Name="TextBox_Login" Height="30" Margin="85,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="170" HorizontalAlignment="Left"/>
+        <Label x:Name="Label_Password" Content="Password" Margin="10,257,0,0" VerticalAlignment="Top" Height="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="70" HorizontalAlignment="Left" Foreground="White" FontFamily="Comic Sans Ms" FontSize="14"/>
+        <PasswordBox x:Name="PasswordBox_Password" HorizontalAlignment="Left" Margin="85,257,0,0" VerticalAlignment="Top" Width="170" Height="30" VerticalContentAlignment="Center"/>
+        <Button x:Name="ButtonClick_Login" Content="Login" Margin="25,305,0,0" VerticalAlignment="Top" Click="LoginButton_Click" Height="30" HorizontalAlignment="Left" Width="98" Background="White" FontFamily="Comic Sans Ms" FontSize="14"/>
+        <Button x:Name="ButtonClick_Guest" Content="Guest" Margin="166,305,0,0" VerticalAlignment="Top" Click="LoginButton_Click" Height="30" HorizontalAlignment="Left" Width="98" Background="White" FontFamily="Comic Sans Ms" FontSize="14"/>
 
     </Grid>
 </Window>
