@@ -25,83 +25,24 @@ namespace RSE
     {
         IRepository _repo = Factory.Instance.GetRepository();
 
-        public static List<User> users = new List<User>();
-        public static int index = -1;
-
-        public MainWindow()
+        private void ButtonRegister_Click(object sender, RoutedEventArgs e)
         {
-            InitializeComponent();
-            try
-            {
-                Programs.GetUsers(ref users);
-            }
-            catch
-            {
-                MessageBox.Show("Error");
-            }
+            var registerWindow = new RegisterWindow();
+            Hide();
         }
 
-        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        private void ButtonLogin_Click(object sender, RoutedEventArgs e)
         {
-            string login, password;
-            login = Login.Text;
-            password = Password.Password;
-            for (int i = 0; i < users.Count; i++)
+            if (_repo.Authorize(TextBox_Login.Text, PasswordBox_Password.Password))
             {
-                string log, pass;
-                log = login;
-                pass = password;
-                if (login == log && password == pass)
-                {
-                    index = i;
-                    ShowInfo showWindow = new ShowInfo();
-                    showWindow.InitializeComponent();
-                    showWindow.Show();
-                    return;
-                }
-                else if (login == log)
-                {
-                    MessageBox.Show("Wrong password");
-                    return;
-                }
-                else
-                {
-                    MessageBox.Show("No such user");
-                    return;
-                }
-
+                ChooseVariant chooseVariant = new ChooseVariant();
+                Close();
             }
-
-        }
-
-        private void RegistrationLabelB_MouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
-        {
-            string loging = Login.Text;
-            string password = Password.Password;
-
-            if (loging.Length < 6 || password.Length < 6)
+            else
             {
-                MessageBox.Show("Short login and password");
-                return;
-            }
-            for (int i = 0; i < users.Count; i++)
-            {
-                if (users[i].Login == loging)
-                {
-                    MessageBox.Show("such login was taken");
-                    return;
-                }
-            }
-            try
-            {
-                Programs.NewUser(loging, password, ref users);
-                MessageBox.Show("New user was created");
-            }
-            catch
-            {
-                MessageBox.Show("Error");
+                MessageBox.Show("Incorrect login/password");
             }
         }
     }
 }
-}
+

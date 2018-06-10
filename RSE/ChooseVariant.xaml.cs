@@ -19,18 +19,18 @@ namespace RSE
     /// <summary>
     /// Логика взаимодействия для choose_variant.xaml
     /// </summary>
-    public partial class choose_variant : Window
+    public partial class ChooseVariant : Window
     {
         IRepository _repo = Factory.Instance.GetRepository();
 
-        public choose_variant()
+        public ChooseVariant()
         {
             InitializeComponent();
         }
 
         internal void OpenVariant(int variantId)
         {
-            Task1 taskWindow = new Task1(variantId);
+            TaskWindow taskWindow = new TaskWindow ();
             taskWindow.InitializeComponent();
             taskWindow.Show();
         }

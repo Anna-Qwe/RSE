@@ -67,9 +67,11 @@
     <Compile Include="FinishWindow.xaml.cs">
       <DependentUpon>FinishWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Programs.cs" />
-    <Compile Include="TasksWindow.xaml.cs">
-      <DependentUpon>TasksWindow.xaml</DependentUpon>
+    <Compile Include="RegisterWindow.xaml.cs">
+      <DependentUpon>RegisterWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TaskWindow.xaml.cs">
+      <DependentUpon>TaskWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="ChooseVariant.xaml">
       <SubType>Designer</SubType>
@@ -94,7 +96,11 @@
       <DependentUpon>LogInWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="TasksWindow.xaml">
+    <Page Include="RegisterWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TaskWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

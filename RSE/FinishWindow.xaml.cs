@@ -26,8 +26,8 @@ namespace RSE
 
         public Finish(bool[] correctAnswers)
         {
-            InitializeComponent();
-            answer.Text = correctAnswers.Where(a => a).Count().ToString();
+            //InitializeComponent();
+            //answer.Text = correctAnswers.Where(a => a).Count().ToString();
         }
     }
 }
