@@ -22,9 +22,9 @@ namespace RSE
     public partial class Task1 : Window
     {
         Variant variant;
-        int curTaskId = -1;
+        int curTaskId = 0;
         Exercise curTask;
-        static int[] answers = new int[12];
+        static bool[] answers = new bool[12];
         public Task1(int variantId)
         {
             var repo = Factory.Instance.GetRepository();
@@ -38,13 +38,64 @@ namespace RSE
 
         private void answer_TextChanged(object sender, TextChangedEventArgs e)
         {
+            //logic in NextTask
+        }
+
+        private void InitTask()
+        {
+            curTask = variant.Exercises.Find(e => e.Number == curTaskId);
+            task.ContentStringFormat = curTask.Description;
+            answer.Text = String.Empty;
         }
 
         private void NextTask()
         {
+            if (curTaskId >= 11)
+            {
+                return;
+            }
+            if (curTaskId >= 0)
+            {
+                checkAnswer();
+            }
             curTaskId++;
-            curTask = variant.Exercises.Find(e => e.Number == curTaskId);
-            task.ContentStringFormat = curTask.Description;
+            InitTask();
+        }
+
+        public void PrevTask()
+        {
+            if (curTaskId <= 0)
+            {
+                return;
+            }
+            if (curTaskId < 12)
+            {
+                checkAnswer();
+            }
+            curTaskId--;
+            InitTask();
+        }
+
+        private void checkAnswer()
+        {
+            int ans;
+            if (!int.TryParse(answer.Text, out ans))
+            {
+                answers[curTaskId] = false;
+                return;
+            }
+            answers[curTaskId] = ans == curTask.Answer;
+        }
+
+        private void FinishTask()
+        {
+            if (curTaskId >= 0 && curTaskId < 12)
+            {
+                checkAnswer();
+            }
+            Finish finish = new Finish(answers);
+            finish.InitializeComponent();
+            finish.Show();
         }
     }
 }
