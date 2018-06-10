@@ -46,5 +46,10 @@ namespace RSE
             curTask = variant.Exercises.Find(e => e.Number == curTaskId);
             task.ContentStringFormat = curTask.Description;
         }
+
+        private void Answer_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

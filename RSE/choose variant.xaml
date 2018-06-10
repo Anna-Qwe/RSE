@@ -5,17 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RSE"
         mc:Ignorable="d"
-        Title="select the job" Height="300" Width="300" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="300" MaxHeight="400" Background="LightBlue" Foreground="DeepPink" MinWidth="290" MinHeight="160">
+        Height="390" Width="290" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="300" MaxHeight="400" Background="LightBlue" Foreground="DeepPink" MinWidth="290" MinHeight="160">
     <Grid Margin="0,1,0,-0.333" Height="270" VerticalAlignment="Top" HorizontalAlignment="Left" Width="291">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="55*"/>
             <ColumnDefinition Width="236*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="Variant1" Content="Variant1" Margin="19.51,30,0,0" VerticalAlignment="Top" Height="31" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="149" HorizontalAlignment="Left"  Background="White" Foreground="DeepPink" Grid.Column="1"/>
-        <Button x:Name="Variant2" Content="Variant2" Margin="19.51,77,0,0" VerticalAlignment="Top" Height="31" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="149" HorizontalAlignment="Left"  Background="White" Foreground="DeepPink" Grid.Column="1"/>
-        <Button x:Name="Variant3" Content="Variant3" Margin="19.51,126,0,0" VerticalAlignment="Top" Height="31" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="149" HorizontalAlignment="Left"  Background="White" Foreground="DeepPink" Grid.Column="1"/>
-        <Button x:Name="Variant4" Content="Variant4" Margin="19.51,177,0,0" VerticalAlignment="Top" Height="31" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="149" HorizontalAlignment="Left"  Background="White" Foreground="DeepPink" Grid.Column="1"/>
-        <Button x:Name="Variant5" Content="Variant5" Margin="19.51,229,0,0" VerticalAlignment="Top" Height="31" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="149" HorizontalAlignment="Left"  Background="White" Foreground="DeepPink" Grid.Column="1"/>
+        <Image Stretch="None" Source="http://uv-kurier.ru/wp-content/uploads/2018/04/matematika-b-2-1024x735.jpg" Margin="0,-54,9.667,-90" Grid.ColumnSpan="2" />
+        <Label x:Name="Name" Content="Choose variant" Margin="18,35,0,0" VerticalAlignment="Top" Height="39" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="245" HorizontalAlignment="Left" Background="White" Foreground="DarkGreen" FontFamily="Comic Sans Ms" FontSize="25" Grid.ColumnSpan="2"/>
+        <Button x:Name="Variant1" Content="Variant1" Margin="19.333,96,0,0" VerticalAlignment="Top" Height="31" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="149" HorizontalAlignment="Left"  Background="White" Grid.Column="1" Foreground="DarkGreen" FontFamily="Comic Sans Ms" FontSize="18"/>
+        <Button x:Name="Variant2" Content="Variant2" Margin="19.333,148,0,0" VerticalAlignment="Top" Height="31" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="149" HorizontalAlignment="Left"  Background="White" Grid.Column="1" Foreground="DarkGreen" FontFamily="Comic Sans Ms" FontSize="18"/>
+        <Button x:Name="Variant3" Content="Variant3" Margin="19.333,199,0,0" VerticalAlignment="Top" Height="31" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="149" HorizontalAlignment="Left"  Background="White" Grid.Column="1" Foreground="DarkGreen" FontFamily="Comic Sans Ms" FontSize="18"/>
+        <Button x:Name="Variant4" Content="Variant4" Margin="19.333,249,0,-10" VerticalAlignment="Top" Height="31" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="149" HorizontalAlignment="Left"  Background="White" Grid.Column="1" Foreground="DarkGreen" FontFamily="Comic Sans Ms" FontSize="18"/>
+        <Button x:Name="Variant5" Content="Variant5" Margin="19.333,0,0,-66" VerticalAlignment="Bottom" Height="31" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="149" HorizontalAlignment="Left"  Background="White" Grid.Column="1" Foreground="DarkGreen" FontFamily="Comic Sans Ms" FontSize="18"/>
 
     </Grid>
 </Window>
