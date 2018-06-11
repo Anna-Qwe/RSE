@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RSE"
         mc:Ignorable="d"
-       Height="390" Width="290" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+       Height="390" Width="390" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid Margin="5">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" MinWidth="100"/>
@@ -18,18 +18,18 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Image Stretch="None" Source="http://uv-kurier.ru/wp-content/uploads/2018/04/matematika-b-2-1024x735.jpg" Margin="0,-26,-3.333,-90.333" Grid.ColumnSpan="2" Grid.RowSpan="5" Height="707" VerticalAlignment="Bottom" />
-        <Label x:Name="Label_Email" Content="Email" Margin="10,160,0,0" VerticalAlignment="Top" Height="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="80" HorizontalAlignment="Left" Background="White" Foreground="DarkGreen" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="16"/>
-        <TextBlock Margin="0,-35,-3.333,9.667" Grid.ColumnSpan="2" Height="616" VerticalAlignment="Bottom"/>
-        <TextBox Name="textBoxName" Margin="118,114,0,446.667" Height="30" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="147" HorizontalAlignment="Left"  Background="White" Grid.ColumnSpan="2" />
-        <Label x:Name="Label_Name" Content="Name" Margin="10,114,0,0" VerticalAlignment="Top" Height="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="80" HorizontalAlignment="Left" Background="White" Foreground="DarkGreen" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="16"/>
-        <TextBox Name="textBoxEmail" Margin="118,160,0,400.667" Height="30" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="147" HorizontalAlignment="Left"  Background="White" Grid.ColumnSpan="2" />
-        <Label x:Name="Label_Registration" Content="Registration" Margin="65,36,0,0" VerticalAlignment="Top" Height="38" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="152" HorizontalAlignment="Left" Background="White" Foreground="DarkGreen" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="24" Grid.ColumnSpan="2"/>
-        <TextBox Name="textBoxLogin" Margin="118,204,0,356.667" Height="30" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="147" HorizontalAlignment="Left"  Background="White" Grid.ColumnSpan="2" />
-        <Label x:Name="Label_Login" Content="Login" Margin="10,204,0,0" VerticalAlignment="Top" Height="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="80" HorizontalAlignment="Left" Background="White" Foreground="DarkGreen" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="16"/>
-        <Label x:Name="Label_Password" Content="Password" Margin="10,249,0,0" VerticalAlignment="Top" Height="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="80" HorizontalAlignment="Left" Background="White" Foreground="DarkGreen" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="16"/>
-        <PasswordBox Name="passwordBox" Margin="118,249,0,311.667" Height="30" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="147" HorizontalAlignment="Left"  Background="White" Grid.ColumnSpan="2" />
-        <Button Content="New User" Margin="87,300,0,0" VerticalAlignment="Top"  Height="30" HorizontalAlignment="Left" Width="98" Background="White" Foreground="DarkGreen" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="16" Grid.ColumnSpan="2"/>
+        <Image Stretch="None" Source="http://uv-kurier.ru/wp-content/uploads/2018/04/matematika-b-2-1024x735.jpg" Margin="0,-35,-3.333,68.667" Width="390" Grid.ColumnSpan="2" />
+        <Label x:Name="Label_Email" Content="Email" Margin="49,160,0,0" VerticalAlignment="Top" Height="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="80" HorizontalAlignment="Left" Background="White" Foreground="DarkGreen" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="16" RenderTransformOrigin="1.008,0.456"/>
+        <TextBlock Margin="-3,-35,-15.333,152.667" Grid.ColumnSpan="2" Height="651" VerticalAlignment="Bottom" Text="&#x9;"/>
+        <TextBox Name="textBoxName" Margin="59,113,0,625.667" Height="30" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="147" HorizontalAlignment="Left"  Background="White" Grid.Column="1" />
+        <Label x:Name="Label_Name" Content="Name" Margin="49,113,0.333,0" VerticalAlignment="Top" Height="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="White" Foreground="DarkGreen" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="16"/>
+        <TextBox Name="textBoxEmail" Margin="59,160,0,578.667" Height="30" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="147" HorizontalAlignment="Left"  Background="White" Grid.Column="1" />
+        <Label x:Name="Label_Registration" Content="Registration" Margin="95,29,0,0" VerticalAlignment="Top" Height="38" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="196" HorizontalAlignment="Left" Background="White" Foreground="DarkGreen" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="24" Grid.ColumnSpan="2"/>
+        <TextBox Name="textBoxLogin" Margin="59,213,0,525.667" Height="30" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="147" HorizontalAlignment="Left"  Background="White" Grid.Column="1" />
+        <Label x:Name="Label_Login" Content="Login" Margin="49,213,0,0" VerticalAlignment="Top" Height="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="80" HorizontalAlignment="Left" Background="White" Foreground="DarkGreen" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="16" Grid.ColumnSpan="2"/>
+        <Label x:Name="Label_Password" Content="Password" Margin="49,265,0,0" VerticalAlignment="Top" Height="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="80" HorizontalAlignment="Left" Background="White" Foreground="DarkGreen" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="16" Grid.ColumnSpan="2"/>
+        <PasswordBox Name="passwordBox" Margin="59,265,0,473.667" Height="30" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="147" HorizontalAlignment="Left"  Background="White" Grid.Column="1" />
+        <Button Content="New User" Margin="118,312,0,0" VerticalAlignment="Top"  Height="30" HorizontalAlignment="Left" Width="139" Background="White" Foreground="DarkGreen" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="16" Grid.ColumnSpan="2"/>
         <StackPanel Grid.Row="4" Grid.ColumnSpan="2" VerticalAlignment="Top" HorizontalAlignment="Center" Orientation="Horizontal">
             <Button Width="100" Margin="5 20" Click="ButtonRegister_Click">Register</Button>
             <Button Width="100" Margin="5 20" Click="ButtonCancel_Click">Cancel</Button>
