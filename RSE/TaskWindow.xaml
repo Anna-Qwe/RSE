@@ -11,12 +11,12 @@
             <ColumnDefinition Width="55*"/>
             <ColumnDefinition Width="236*"/>
         </Grid.ColumnDefinitions>
-        <Image Stretch="None" Source="http://uv-kurier.ru/wp-content/uploads/2018/04/matematika-b-2-1024x735.jpg" Margin="0,-25,-0.333,-29" Grid.ColumnSpan="2" />
+        <Image Stretch="None" Source="http://uv-kurier.ru/wp-content/uploads/2018/04/matematika-b-2-1024x735.jpg" Margin="0,-27,-0.333,-34" Grid.ColumnSpan="2" />
         <TextBox  Name="TextBoxDesc" Height="136" Margin="29,0,0,134" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="239" HorizontalAlignment="Left" Background="White" RenderTransformOrigin="0.655,-1.374" Grid.ColumnSpan="2" DataContext="{Binding Exercise.Description}" />
         <TextBox Name="TextBoxAnswer" Height="30" Margin="9.333,156,0,84" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="172" HorizontalAlignment="Left"  Background="White" Grid.Column="1"  />
-        <Button Click="ButtonNext_Click"  Content="Next task" Margin="108.333,207,0,0" VerticalAlignment="Top" Height="31" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="118" HorizontalAlignment="Left"  Background="White" Foreground="DarkGreen" FontFamily="Comic Sans Ms" FontSize="16" Grid.Column="1"/>
-        <Button Click="ButtonPrevious_Click" Content="Previous task" Margin="10,207,0,0" VerticalAlignment="Top" Height="31" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="118" HorizontalAlignment="Left"  Background="White" Foreground="DarkGreen" FontFamily="Comic Sans Ms" FontSize="16" Grid.ColumnSpan="2"/>
-        <Button Click="ButtonFinish_Click" Content="Finish" Margin="31.333,248,0,-9" VerticalAlignment="Top" Height="31" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="118" HorizontalAlignment="Left"  Background="White" Foreground="DarkGreen" FontFamily="Comic Sans Ms" FontSize="16" Grid.Column="1"/>
+        <Button Click="ButtonNext_Click"  Content="Next task" Margin="108.333,207,0,0" VerticalAlignment="Top" Height="31" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="118" HorizontalAlignment="Left"  Background="White" Foreground="DarkGreen" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="16" Grid.Column="1"/>
+        <Button Click="ButtonPrevious_Click" Content="Previous task" Margin="10,207,0,0" VerticalAlignment="Top" Height="31" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="118" HorizontalAlignment="Left"  Background="White" Foreground="DarkGreen" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="16" Grid.ColumnSpan="2"/>
+        <Button Click="ButtonFinish_Click" Content="Finish" Margin="31.333,248,0,-9" VerticalAlignment="Top" Height="31" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="118" HorizontalAlignment="Left"  Background="White" Foreground="DarkGreen" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="16" Grid.Column="1"/>
 
     </Grid>
 

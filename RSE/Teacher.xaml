@@ -1,0 +1,30 @@
+﻿<Window x:Class="RSE.Teacher"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RSE"
+        mc:Ignorable="d"
+       Height="390" Width="389.334"
+   HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="300" MaxHeight="400" Foreground="DeepPink" MinWidth="290" MinHeight="160">
+    <Grid Margin="0,1,0,-0.333" Height="270" VerticalAlignment="Top" HorizontalAlignment="Left" Width="291">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="55*"/>
+            <ColumnDefinition Width="236*"/>
+        </Grid.ColumnDefinitions>
+        <Image Stretch="None" Source="http://uv-kurier.ru/wp-content/uploads/2018/04/matematika-b-2-1024x735.jpg" Margin="0,-27,-98.333,-90" Grid.ColumnSpan="2" Height="387" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="389" />
+        <Label x:Name="Tech" Content="We can find you a teacher" Height="43" Margin="21.333,-11,-29.333,238" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="244" HorizontalAlignment="Left" Background="White" Foreground="DarkGreen"  FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="21"  RenderTransformOrigin="0.655,-1.374" Grid.Column="1"  />
+        <Label x:Name="Text" Content="Phone number" Margin="54,285,118.667,-45" VerticalContentAlignment="Center" Background="White" Foreground="DarkGreen"  FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="14"  RenderTransformOrigin="0.655,-1.374" Grid.ColumnSpan="2"  />
+        <Label x:Name="Teacher1_inf" Content="" Margin="31.333,63,-78.333,186" VerticalContentAlignment="Center" Width="283" HorizontalAlignment="Left" Background="White" Foreground="DarkGreen"  FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="14"  RenderTransformOrigin="0.655,-1.374" Grid.Column="1"  />
+        <Label x:Name="Teacher2_inf" Content="" Margin="31.333,108,-78.333,141" VerticalContentAlignment="Center" Width="283" HorizontalAlignment="Left" Background="White" Foreground="DarkGreen"  FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="14"  RenderTransformOrigin="0.655,-1.374" Grid.Column="1"  />
+        <Label x:Name="Teacher3_inf" Content="" Margin="31.333,151,-78.333,98" VerticalContentAlignment="Center" Width="283" HorizontalAlignment="Left" Background="White" Foreground="DarkGreen"  FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="14"  RenderTransformOrigin="0.655,-1.374" Grid.Column="1"  />
+        <Label x:Name="Teacher4_inf" Content="" Margin="31.333,196,-78.333,53" VerticalContentAlignment="Center" Width="283" HorizontalAlignment="Left" Background="White" Foreground="DarkGreen"  FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="14"  RenderTransformOrigin="0.655,-1.374" Grid.Column="1"  />
+        <Label x:Name="Teacher5_inf" Content="" Margin="31.333,239,-78.333,10" VerticalContentAlignment="Center" Width="283" HorizontalAlignment="Left" Background="White" Foreground="DarkGreen"  FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="14"  RenderTransformOrigin="0.655,-1.374" Grid.Column="1"  />
+        <TextBox Name="Phone_Number" Margin="173.333,285,-55.333,-45" Height="30" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="118" HorizontalAlignment="Left"  Background="White" RenderTransformOrigin="0.215,0.467" Grid.Column="1" />
+        <Button x:Name="Phone" Content="Add phone" Margin="97.333,320,0,-81" VerticalAlignment="Top" Height="31" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="90" HorizontalAlignment="Left"  Background="White" Foreground="DarkGreen" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="16"  Grid.Column="1"/>
+
+
+
+
+    </Grid>
+</Window>
