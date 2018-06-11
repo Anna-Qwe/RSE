@@ -18,8 +18,5 @@
         <TextBox x:Name="TextBox_Answer" Height="30" Margin="52.333,194,0,46" TextWrapping="Wrap" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="70" HorizontalAlignment="Left" Background="White" Grid.Column="1" />
         <Button x:Name="Button_Next" Content="To solve the another option" Margin="0.333,229,0,0" VerticalAlignment="Top" Height="31" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="192" HorizontalAlignment="Left"  Background="White" Foreground="DarkGreen" FontFamily="Comic Sans Ms" FontSize="14"  Grid.Column="1"/>
 
-
-
-
     </Grid>
 </Window>
