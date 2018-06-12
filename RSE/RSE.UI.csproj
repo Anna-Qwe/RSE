@@ -110,15 +110,11 @@
       <DependentUpon>LogInWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-<<<<<<< HEAD
     <Page Include="registration.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Task1.xaml">
-=======
     <Page Include="TaskWindow.xaml">
->>>>>>> 66cac44497de0c6fd29e3e25fca3c91e4eefb3fc
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
