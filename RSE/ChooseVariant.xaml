@@ -5,20 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RSE"
         mc:Ignorable="d"
-        Height="600" Width="520" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="520" MaxHeight="600" Background="LightBlue" Foreground="DeepPink" MinWidth="290" MinHeight="160">
-    <Grid Margin="-2,0,0,-2.333" Height="600" VerticalAlignment="Top" HorizontalAlignment="Left" Width="520" Background="#FF54CEDF">
+        Height="450" Width="390" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="390" MaxHeight="450" Background="LightBlue" Foreground="DeepPink" MinWidth="290" MinHeight="160">
+    <Grid Margin="-2,0,0,-2.333" Height="450" VerticalAlignment="Top" HorizontalAlignment="Left" Width="390" Background="#FF54CEDF">
 
 
-        <Grid Height="504" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="457" Background="White" Margin="28,0,0,55"/>
-        <Label x:Name="Choose" Content="Choose variant" Margin="28,84,0,0" VerticalAlignment="Top" Height="79" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="457" HorizontalAlignment="Left" Background="White" Foreground="#FF54CEDF" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="40"/>
-        <ComboBox Name="comboBox1" Margin="51,268,59,222">
+        <Grid Height="302" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="337" Background="White" Margin="24,0,0,63"/>
+        <Label x:Name="Choose" Content="Choose variant" Margin="24,25,0,0" VerticalAlignment="Top" Height="79" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="337" HorizontalAlignment="Left" Background="White" Foreground="#FF54CEDF" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="30"/>
+        <ComboBox Name="comboBox1" Margin="53,140,57,222">
             <ComboBoxItem Content="Variant1" Background="White" Foreground="#FF54CEDF" FontWeight="Bold" FontFamily="Times New Roman" FontSize="18"/>
             <ComboBoxItem Content="Variant2" Background="White" Foreground="#FF54CEDF" FontWeight="Bold" FontFamily="Times New Roman" FontSize="18"/>
             <ComboBoxItem Content="Variant3" Background="White" Foreground="#FF54CEDF" FontWeight="Bold" FontFamily="Times New Roman" FontSize="18"/>
             <ComboBoxItem Content="Variant4" Background="White" Foreground="#FF54CEDF" FontWeight="Bold" FontFamily="Times New Roman" FontSize="18"/>
             <ComboBoxItem Content="Variant5" Background="White" Foreground="#FF54CEDF" FontWeight="Bold" FontFamily="Times New Roman" FontSize="18"/>
         </ComboBox>
-        <Button x:Name="Start" Content="Start" Margin="145,428,0,0" VerticalAlignment="Top"  Height="61" HorizontalAlignment="Left" Width="231" Background="#FF54CEDF" Foreground="White" BorderBrush="#FF54CEDF" FontWeight="Bold" FontFamily="Times New Roman" FontSize="30"/>
+        <Button x:Name="Start" Content="Start" Margin="106,288,0,0" VerticalAlignment="Top"  Height="46" HorizontalAlignment="Left" Width="176" Background="#FF54CEDF" Foreground="White" BorderBrush="#FF54CEDF" FontWeight="Bold" FontFamily="Times New Roman" FontSize="20"/>
 
 
     </Grid>
