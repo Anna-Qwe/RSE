@@ -6,22 +6,20 @@
         xmlns:local="clr-namespace:RSE"
         mc:Ignorable="d"
         Height="390" Width="390" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="300" MaxHeight="400" Background="LightBlue" Foreground="DeepPink" MinWidth="290" MinHeight="160">
-    <Grid Margin="0,1,-0.667,-3.333" Height="363" VerticalAlignment="Top" HorizontalAlignment="Left" Width="294">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="55*"/>
-            <ColumnDefinition Width="67*"/>
-            <ColumnDefinition Width="171*"/>
-        </Grid.ColumnDefinitions>
-        <Image Stretch="None" Source="http://uv-kurier.ru/wp-content/uploads/2018/04/matematika-b-2-1024x735.jpg" Margin="0,-27,-96.001,0" Grid.ColumnSpan="3" Height="390" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="390" />
-        <Label x:Name="Choose" Content="Choose variant" Margin="28,10,-67,0" VerticalAlignment="Top" Height="94" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="333" HorizontalAlignment="Left" Background="White" Foreground="DarkGreen" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="30" Grid.ColumnSpan="3"/>
-        <ComboBox Name="comboBox1" Margin="55,140,-46,161" Grid.ColumnSpan="3">
-            <ComboBoxItem Content="Variant1" Background="White" Foreground="DarkGreen" FontWeight="Bold" FontFamily="Times New Roman" FontSize="18"/>
-            <ComboBoxItem Content="Variant2" Background="White" Foreground="DarkGreen" FontWeight="Bold" FontFamily="Times New Roman" FontSize="18"/>
-            <ComboBoxItem Content="Variant3" Background="White" Foreground="DarkGreen" FontWeight="Bold" FontFamily="Times New Roman" FontSize="18"/>
-            <ComboBoxItem Content="Variant4" Background="White" Foreground="DarkGreen" FontWeight="Bold" FontFamily="Times New Roman" FontSize="18"/>
-            <ComboBoxItem Content="Variant5" Background="White" Foreground="DarkGreen" FontWeight="Bold" FontFamily="Times New Roman" FontSize="18"/>
+    <Grid Margin="-2,0,-94.667,-29.333" Height="390" VerticalAlignment="Top" HorizontalAlignment="Left" Width="390" Background="#FF54CEDF">
+
+
+        <Grid Height="338" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="338" Background="White" Margin="24,0,0,27" Grid.ColumnSpan="2">
+        </Grid>
+        <Label x:Name="Choose" Content="Choose variant" Margin="24,25,0,0" VerticalAlignment="Top" Height="79" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="337" HorizontalAlignment="Left" Background="White" Foreground="#FF54CEDF" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="30"/>
+        <ComboBox Name="comboBox1" Margin="55,140,55,161">
+            <ComboBoxItem Content="Variant1" Background="White" Foreground="#FF54CEDF" FontWeight="Bold" FontFamily="Times New Roman" FontSize="18"/>
+            <ComboBoxItem Content="Variant2" Background="White" Foreground="#FF54CEDF" FontWeight="Bold" FontFamily="Times New Roman" FontSize="18"/>
+            <ComboBoxItem Content="Variant3" Background="White" Foreground="#FF54CEDF" FontWeight="Bold" FontFamily="Times New Roman" FontSize="18"/>
+            <ComboBoxItem Content="Variant4" Background="White" Foreground="#FF54CEDF" FontWeight="Bold" FontFamily="Times New Roman" FontSize="18"/>
+            <ComboBoxItem Content="Variant5" Background="White" Foreground="#FF54CEDF" FontWeight="Bold" FontFamily="Times New Roman" FontSize="18"/>
         </ComboBox>
-        <Button x:Name="Start" Content="Start" Margin="52.667,287,0,0" VerticalAlignment="Top"  Height="46" HorizontalAlignment="Left" Width="176" Background="White" Foreground="DarkGreen" FontWeight="Bold" FontFamily="Times New Roman" FontSize="20" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Button x:Name="Start" Content="Start" Margin="105,287,0,0" VerticalAlignment="Top"  Height="46" HorizontalAlignment="Left" Width="176" Background="#FF54CEDF" Foreground="White" BorderBrush="#FF54CEDF" FontWeight="Bold" FontFamily="Times New Roman" FontSize="20"/>
 
 
     </Grid>

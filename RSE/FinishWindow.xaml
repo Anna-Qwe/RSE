@@ -6,18 +6,26 @@
         xmlns:local="clr-namespace:RSE"
         mc:Ignorable="d"
          Height="390" Width="390"
-   HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="300" MaxHeight="400" Foreground="DeepPink" MinWidth="290" MinHeight="160">
-    <Grid Margin="0,1,0,-0.333" Height="270" VerticalAlignment="Top" HorizontalAlignment="Left" Width="291">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="55*"/>
-            <ColumnDefinition Width="236*"/>
-        </Grid.ColumnDefinitions>
-        <Image Stretch="None" Source="http://uv-kurier.ru/wp-content/uploads/2018/04/matematika-b-2-1024x735.jpg" Margin="0,-27,-84.333,-90" Grid.ColumnSpan="2" Height="390" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="390" />
-        <Label x:Name="Test" Content="You've completed the test" Height="83" Margin="26,21,-60.333,166" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="325" HorizontalAlignment="Left" Background="White" Foreground="DarkGreen"  FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="28"  RenderTransformOrigin="0.655,-1.374" Grid.ColumnSpan="2"  />
-        <Label x:Name="Result" Content="Your result:" Height="40" Margin="88.333,148,0,82" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="99" HorizontalAlignment="Left" Background="White" Foreground="DarkGreen" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="16" RenderTransformOrigin="0.655,-1.374" Grid.Column="1" />
-        <TextBox x:Name="Answer" Height="30" Margin="103.333,207,0,33" TextWrapping="Wrap" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="70" HorizontalAlignment="Left" Background="White" Grid.Column="1" />
-        <Button x:Name="Next" Content="To solve the another option" Margin="10.333,257,-24.333,-18" VerticalAlignment="Top" Height="31" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="250" HorizontalAlignment="Left"  Background="White" Foreground="DarkGreen" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="16"  Grid.Column="1"/>
-        <Button x:Name="Teacher" Content="Find a teacher" Margin="10.333,302,-24.333,-63" VerticalAlignment="Top" Height="31" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="250" HorizontalAlignment="Left"  Background="White" Foreground="DarkGreen" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="16"  Grid.Column="1"/>
+   HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="300" MaxHeight="400" MinWidth="290" MinHeight="160">
+    <Grid Margin="-2,0,-94.667,-29.333" Height="390" VerticalAlignment="Top" HorizontalAlignment="Left" Width="390" Background="#FF54CEDF">
+
+
+        <Grid Height="338" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="338" Background="White" Margin="24,0,0,27" Grid.ColumnSpan="2">
+        </Grid>
+
+
+        <Label x:Name="Test" Content="You've completed the test" Height="65" Margin="47,25,0,300" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="290" HorizontalAlignment="Left" Background="White" Foreground="#FF54CEDF"  FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="24"  RenderTransformOrigin="0.655,-1.374" Grid.ColumnSpan="2"  />
+        <DataGrid Name="dataGridAnswer" Margin="72,90,0,124" AutoGenerateColumns="True" Background="White" HorizontalAlignment="Left" Width="238" Grid.ColumnSpan="2">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="№" Binding="{Binding }" Width="25" />
+                <DataGridTextColumn Header="Your Answer" Binding="{Binding }" Width="100"/>
+                <DataGridTextColumn Header="Right Answer" Binding="{Binding RouteName}" Width="100"/>
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBox x:Name="Answer" Height="30" Margin="147,280,0,80" TextWrapping="Wrap" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="97" HorizontalAlignment="Left" Background="White" BorderBrush="#FF54CEDF" Grid.ColumnSpan="2" />
+        <Button x:Name="Next" Content="Another option" Margin="47,315,0,0" VerticalAlignment="Top" Height="31" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="118" HorizontalAlignment="Left"  Background="#FF54CEDF" Foreground="White" BorderBrush="White" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="16"/>
+        <Button x:Name="Teacher" Content="Find a teacher" Margin="219,315,0,0" VerticalAlignment="Top" Height="31" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="118" HorizontalAlignment="Left"  Background="#FF54CEDF" Foreground="White" BorderBrush="White" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="16" RenderTransformOrigin="0.518,1.704"/>
 
 
 

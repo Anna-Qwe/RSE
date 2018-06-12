@@ -6,17 +6,18 @@
         xmlns:local="clr-namespace:RSE"
         mc:Ignorable="d"
         Height="390" Width="390" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="300" MaxHeight="400" MinWidth="290" MinHeight="160">
-    <Grid Margin="0,1,0,-0.333" Height="270" VerticalAlignment="Top" HorizontalAlignment="Left" Width="291">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="55*"/>
-            <ColumnDefinition Width="236*"/>
-        </Grid.ColumnDefinitions>
-        <Image Stretch="None" Source="http://uv-kurier.ru/wp-content/uploads/2018/04/matematika-b-2-1024x735.jpg" Margin="0,-27,-99.333,-93" Height="390" Width="390" Grid.ColumnSpan="2" HorizontalAlignment="Left" />
-        <TextBox  Name="TextBoxDesc" Height="169" Margin="29,0,-66.333,101" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="328" HorizontalAlignment="Left" Background="White" RenderTransformOrigin="0.655,-1.374" Grid.ColumnSpan="2" DataContext="{Binding Exercise.Description}" />
-        <TextBox Name="TextBoxAnswer" Height="30" Margin="41.333,195,0,45" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="185" HorizontalAlignment="Left"  Background="White" Grid.Column="1"  />
-        <Button Click="ButtonNext_Click"  Content="Next task" Margin="166.333,249,-48.333,-10" VerticalAlignment="Top" Height="31" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="118" HorizontalAlignment="Left"  Background="White" Foreground="DarkGreen" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="16" Grid.Column="1"/>
-        <Button Click="ButtonPrevious_Click" Content="Previous task" Margin="0.333,249,0,-10" VerticalAlignment="Top" Height="31" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="118" HorizontalAlignment="Left"  Background="White" Foreground="DarkGreen" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="16" Grid.Column="1"/>
-        <Button Click="ButtonFinish_Click" Content="Finish" Margin="75.333,306,0,-67" VerticalAlignment="Top" Height="31" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="118" HorizontalAlignment="Left"  Background="White" Foreground="DarkGreen" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="16" Grid.Column="1"/>
+    <Grid Margin="-2,0,-94.667,-29.333" Height="390" VerticalAlignment="Top" HorizontalAlignment="Left" Width="390" Background="#FF54CEDF">
+
+
+        <Grid Height="338" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="338" Background="White" Margin="24,0,0,27" Grid.ColumnSpan="2">
+        </Grid>
+
+
+        <TextBox  Name="TextBoxDesc" Height="169" Margin="24,48,0,173" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="338" HorizontalAlignment="Left" Background="White" RenderTransformOrigin="0.655,-1.374" DataContext="{Binding Exercise.Description}" BorderBrush="#FF54CEDF"/>
+        <TextBox Name="TextBoxAnswer" Height="30" Margin="98,280,0,80" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="185" HorizontalAlignment="Left"  Background="White" BorderBrush="#FF54CEDF" />
+        <Button Click="ButtonNext_Click"  Content="Next task" Margin="215,234,0,0" VerticalAlignment="Top" Height="31" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="118" HorizontalAlignment="Left"  Background="#FF54CEDF" Foreground="White" BorderBrush="#FF54CEDF" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="16"/>
+        <Button Click="ButtonPrevious_Click" Content="Previous task" Margin="55,234,0,0" VerticalAlignment="Top" Height="31" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="118" HorizontalAlignment="Left"  Background="#FF54CEDF" Foreground="White" BorderBrush="#FF54CEDF" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="16"/>
+        <Button Click="ButtonFinish_Click" Content="Finish" Margin="124,319,0,0" VerticalAlignment="Top" Height="31" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="118" HorizontalAlignment="Left"  Background="#FF54CEDF" Foreground="White" BorderBrush="#FF54CEDF" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="16"/>
 
     </Grid>
 
