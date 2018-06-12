@@ -20,14 +20,23 @@ namespace RSE
     /// <summary>
     /// Логика взаимодействия для Finish.xaml
     /// </summary>
-    public partial class Finish : Window
+    public partial class FinishWindow : Window
     {
         IRepository _repo = Factory.Instance.GetRepository();
 
-        public Finish(bool[] correctAnswers)
+        public FinishWindow(List<Answer> answers)
         {
-            //InitializeComponent();
-            //answer.Text = correctAnswers.Where(a => a).Count().ToString();
+            InitializeComponent();
+            dataGridAnswer.ItemsSource = answers;
+
+            var correctAnswers = 0;
+
+            foreach (var ans in answers)
+            {
+                if (ans.UserAnswer.ToString() == ans.CorrectAnswer.ToString()) correctAnswers++;
+            }
+
+            CorrectAnswers.Text = correctAnswers.ToString();
         }
     }
 }
