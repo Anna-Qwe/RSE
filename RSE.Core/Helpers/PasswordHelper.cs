@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace RSE.Core.Helpers
 {
-    class PasswordHelper
+    public class PasswordHelper
     {
         public static string GetHash(string password)
         {

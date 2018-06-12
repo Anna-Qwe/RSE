@@ -15,6 +15,7 @@ namespace RSE.Core.Migrations
         {
             public List<Exercise> Exercises { get; set; }
             public List<Variant> Variants { get; set; }
+            public List<Teacher> Teachers { get; set; }
             public List<User> Users { get; set; }
         }
         private const string DataFolder = "RSE.Core/Data";
@@ -45,6 +46,10 @@ namespace RSE.Core.Migrations
                 {
                     context.Exercises.AddOrUpdate(s => s.Number, entities: ex);
                 }
+            }
+            foreach (var te in _generalData.Teachers)
+            {
+                context.Teachers.AddOrUpdate(s => s.Name, entities: te);
             }
         }
     }

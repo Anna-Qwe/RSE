@@ -15,7 +15,7 @@ namespace RSE.Core
 
         public IEnumerable<Exercise> Exercises { get { return context.Exercises;  } }
         public IEnumerable<Variant> Variants { get { return context.Variants; } }
-       
+        public IEnumerable<Teacher> Teachers { get { return context.Teachers; } }
 
         private User _authorizedUser;
 
@@ -26,10 +26,37 @@ namespace RSE.Core
             return _authorizedUser;
         }
 
+        public void SaveUserPhone (int phone)
+        {
+            var phoneToSave = context.Users.SingleOrDefault(x => x.Id == _authorizedUser.Id && x.Phone == phone);
+            if (phoneToSave == null)
+            {
+                phoneToSave.Phone = phone;
+            }
+            context.Users.Add(phoneToSave);
+            context.SaveChanges();
+        }
+
+        public List<int> WrongAnswers (int answer, int numbOfTask,  Variant variant)
+        {
+            List<int> WrongAnswers = new List<int>();
+            int CountOfWrongAnswers;
+
+            Exercise task = context.Exercises.SingleOrDefault(x => x.Variant == variant && x.Number == numbOfTask && x.Answer == answer);
+            if ( task.Answer != answer)
+            {
+                WrongAnswers.Add(answer);
+                CountOfWrongAnswers = WrongAnswers.Count();
+            }
+            return WrongAnswers;
+           
+        }
+
+
         public bool Authorize(string login, string password)
         {
             string hashedPassword = PasswordHelper.GetHash(password);
-            User user = this.context.Users.SingleOrDefault(x => x.Login == login && x.Password == hashedPassword);
+            User user = context.Users.SingleOrDefault(x => x.Login == login && x.Password == hashedPassword);
             if (user != null)
             {
                 _authorizedUser = user;
@@ -41,12 +68,12 @@ namespace RSE.Core
 
         public void RegisterUser(User user)
         {
-            User found = this.context.Users.SingleOrDefault(x => x.Login == user.Login);
+            User found = context.Users.SingleOrDefault(x => x.Login == user.Login);
             if (found != null)
                 throw new InvalidOperationException("Dublicate username");
 
-            this.context.Users.Add(user);
-            this.context.SaveChanges();
+            context.Users.Add(user);
+            context.SaveChanges();
         }
     }
 }

@@ -11,10 +11,12 @@ namespace RSE.Core.Interfaces
     {
         IEnumerable<Exercise> Exercises { get; }
         IEnumerable<Variant> Variants { get; }
-       
+        IEnumerable<Teacher> Teachers { get; }
 
+        List<int> WrongAnswers(int answer, int numbOfTask, Variant variant);
         bool Authorize(string login, string password);
         void RegisterUser(User user);
+        void SaveUserPhone(int phone);
         User GetAuthorizedUser();
     }
 }

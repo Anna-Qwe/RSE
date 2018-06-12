@@ -36,6 +36,12 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="MaterialDesignColors, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.1.1.2\lib\net45\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=2.4.0.1044, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.2.4.0.1044\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -82,9 +88,22 @@
     <Compile Include="Migrations\201806091730576_iml.Designer.cs">
       <DependentUpon>201806091730576_iml.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806111652065_teachers.cs" />
+    <Compile Include="Migrations\201806111652065_teachers.Designer.cs">
+      <DependentUpon>201806111652065_teachers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806111702323_addUserPhone.cs" />
+    <Compile Include="Migrations\201806111702323_addUserPhone.Designer.cs">
+      <DependentUpon>201806111702323_addUserPhone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806111845339_delete_email.cs" />
+    <Compile Include="Migrations\201806111845339_delete_email.Designer.cs">
+      <DependentUpon>201806111845339_delete_email.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Exercise.cs" />
     <Compile Include="Models\FullINfo.cs" />
+    <Compile Include="Models\Teacher.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\Variant.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -116,6 +135,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806091730576_iml.resx">
       <DependentUpon>201806091730576_iml.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806111652065_teachers.resx">
+      <DependentUpon>201806111652065_teachers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806111702323_addUserPhone.resx">
+      <DependentUpon>201806111702323_addUserPhone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806111845339_delete_email.resx">
+      <DependentUpon>201806111845339_delete_email.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
