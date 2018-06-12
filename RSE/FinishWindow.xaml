@@ -5,26 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RSE"
         mc:Ignorable="d"
-         Height="450" Width="390"
-   HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="390" MaxHeight="450" >
-    <Grid Margin="-2,0,-94.667,-29.333" Height="450" VerticalAlignment="Top" HorizontalAlignment="Left" Width="390" Background="#FF54CEDF">
+         Height="600" Width="520"
+   HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="600" MaxHeight="520" >
+    <Grid Margin="-2,0,-94.667,-29.333" Height="600" VerticalAlignment="Top" HorizontalAlignment="Left" Width="520" Background="#FF54CEDF">
 
 
-        <Grid Height="382" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="338" Background="White" Margin="24,0,0,27"/>
+        <Grid Height="459" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="466" Background="White" Margin="27,0,0,106"/>
 
 
-        <Label x:Name="Test" Content="You've completed the test" Height="65" Margin="49,55,0,330" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="290" HorizontalAlignment="Left" Background="White" Foreground="#FF54CEDF"  FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="24"  RenderTransformOrigin="0.655,-1.374"  />
-        <DataGrid Name="dataGridAnswer" Margin="74,112,0,120" AutoGenerateColumns="True" Background="White" HorizontalAlignment="Left" Width="238">
+        <Label x:Name="Test" Content="You've completed the test" Height="65" Margin="37,35,0,500" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="442" HorizontalAlignment="Left" Background="White" Foreground="#FF54CEDF"  FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="38"  RenderTransformOrigin="0.655,-1.374"  />
+        <DataGrid Name="dataGridAnswer" Margin="47,92,0,200" AutoGenerateColumns="False" Background="White" HorizontalAlignment="Left" Width="430">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="№" Binding="{Binding }" Width="25" />
-                <DataGridTextColumn Header="Your Answer" Binding="{Binding }" Width="100"/>
-                <DataGridTextColumn Header="Right Answer" Binding="{Binding RouteName}" Width="100"/>
+                <DataGridTextColumn Header="№" Binding="{Binding }" Width="70" />
+                <DataGridTextColumn Header="Your Answer" Binding="{Binding }" Width="180"/>
+                <DataGridTextColumn Header="Right Answer" Binding="{Binding RouteName}" Width="180"/>
 
             </DataGrid.Columns>
         </DataGrid>
-        <TextBox x:Name="Answer" Height="30" Margin="147,350,0,70" TextWrapping="Wrap" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="97" HorizontalAlignment="Left" Background="White" BorderBrush="#FF54CEDF" />
-        <Button x:Name="Next" Content="Another option" Margin="49,385,0,0" VerticalAlignment="Top" Height="31" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="118" HorizontalAlignment="Left"  Background="#FF54CEDF" Foreground="White" BorderBrush="White" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="16"/>
-        <Button x:Name="Teacher" Content="Find a teacher" Margin="221,385,0,0" VerticalAlignment="Top" Height="31" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="118" HorizontalAlignment="Left"  Background="#FF54CEDF" Foreground="White" BorderBrush="White" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="16" RenderTransformOrigin="0.518,1.704"/>
+        <TextBox x:Name="Answer" Height="61" Margin="191,420,0,119" TextWrapping="Wrap" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="144" HorizontalAlignment="Left" Background="White" BorderBrush="#FF54CEDF" RenderTransformOrigin="0.703,0.583" />
+        <Button x:Name="Next" Content="Another option" Margin="47,434,0,0" VerticalAlignment="Top" Height="47" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="125" HorizontalAlignment="Left"  Background="#FF54CEDF" Foreground="White" BorderBrush="White" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="18"/>
+        <Button x:Name="Teacher" Content="Find a teacher" Margin="352,434,0,0" VerticalAlignment="Top" Height="47" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="125" HorizontalAlignment="Left"  Background="#FF54CEDF" Foreground="White" BorderBrush="White" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="18" RenderTransformOrigin="0.518,1.704"/>
 
 
 

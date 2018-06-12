@@ -5,26 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RSE"
         mc:Ignorable="d"
-       Height="450" Width="390"
-   HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="390" MaxHeight="450" Foreground="DeepPink">
-    <Grid Margin="-2,0,-94.667,-29.333" Height="450" VerticalAlignment="Top" HorizontalAlignment="Left" Width="390" Background="#FF54CEDF">
+       Height="600" Width="520"
+   HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="520" MaxHeight="600" Foreground="DeepPink">
+    <Grid Margin="-2,0,-94.667,-29.333" Height="600" VerticalAlignment="Top" HorizontalAlignment="Left" Width="520" Background="#FF54CEDF">
 
 
-        <Grid Height="338" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="338" Background="White" Margin="24,0,0,27" Grid.ColumnSpan="2">
-        </Grid>
-        <Label x:Name="Tech" Content="We can find you a teacher" Height="43" Margin="71,85,0,322" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="244" HorizontalAlignment="Left" Background="White" Foreground="#FF54CEDF"  FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="21"  RenderTransformOrigin="0.655,-1.374"  />
+        <Grid Height="536" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="469" Background="White" Margin="24,0,0,27"/>
+        <Label x:Name="Tech" Content="We can find you a teacher" Height="71" Margin="24,69,0,460" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="469" HorizontalAlignment="Left" Background="White" Foreground="#FF54CEDF"  FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="40"  RenderTransformOrigin="0.655,-1.374"  />
 
-        <Label x:Name="Teacher1_inf" Margin="42,303,0,119" VerticalContentAlignment="Center" Width="300" HorizontalAlignment="Left" Background="#FF54CEDF" Foreground="White" BorderBrush="#FF54CEDF"  FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="14"  RenderTransformOrigin="0.655,-1.374"  />
-        <Label x:Name="Teacher2_inf" Margin="42,141,0,281" VerticalContentAlignment="Center" Width="300" HorizontalAlignment="Left" Background="#FF54CEDF" Foreground="White" BorderBrush="#FF54CEDF"  FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="14"  RenderTransformOrigin="0.655,-1.374"  />
-        <Label x:Name="Teacher3_inf" Margin="42,182,0,240" VerticalContentAlignment="Center" Width="300" HorizontalAlignment="Left" Background="#FF54CEDF" Foreground="White" BorderBrush="#FF54CEDF"  FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="14"  RenderTransformOrigin="0.655,-1.374"  />
-        <Label x:Name="Teacher4_inf" Margin="42,223,0,199" VerticalContentAlignment="Center" Width="300" HorizontalAlignment="Left" Background="#FF54CEDF" Foreground="White" BorderBrush="#FF54CEDF" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="14"  RenderTransformOrigin="0.655,-1.374"  />
-        <Label x:Name="Teacher5_inf" Margin="42,263,0,159" VerticalContentAlignment="Center" Width="300" HorizontalAlignment="Left" Background="#FF54CEDF" Foreground="White" BorderBrush="White"  FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="14"  RenderTransformOrigin="0.641,-0.321"  />
-        <Label x:Name="Phone1" Content="Phone" Margin="58,378,0,45" VerticalContentAlignment="Center" Width="48" HorizontalAlignment="Left" Background="#FF54CEDF" Foreground="White" BorderBrush="White"  FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="12"  RenderTransformOrigin="0.641,-0.321"  />
-        <Label x:Name="Name1" Content="Name" Margin="58,346,0,77" VerticalContentAlignment="Center" Width="48" HorizontalAlignment="Left" Background="#FF54CEDF" Foreground="White" BorderBrush="White"  FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="12"  RenderTransformOrigin="0.641,-0.321"  />
-        <TextBox Name="Phone_Number" Margin="123,378,0,45" Height="27" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="118" HorizontalAlignment="Left"  Background="White" RenderTransformOrigin="0.215,0.467" BorderBrush="#FF54CEDF" />
-        <TextBox Name="User_Name" Margin="123,346,0,77" Height="27" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="118" HorizontalAlignment="Left"  Background="White" RenderTransformOrigin="0.215,0.467" BorderBrush="#FF54CEDF" />
-        <Button x:Name="Phone" Content="Call back" Margin="252,346,0,0" VerticalAlignment="Top" Height="27" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="90" HorizontalAlignment="Left"  Background="#FF54CEDF" Foreground="White" BorderBrush="#FF54CEDF" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="16"/>
-        <Button x:Name="Close" Content="Close" Margin="252,378,0,0" VerticalAlignment="Top" Height="27" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="90" HorizontalAlignment="Left"  Background="#FF54CEDF" Foreground="White" BorderBrush="#FF54CEDF" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="16"/>
+        <Label x:Name="Teacher1_inf" Margin="58,215,0,338" VerticalContentAlignment="Center" Width="400" HorizontalAlignment="Left" Background="#FF54CEDF" Foreground="White" BorderBrush="#FF54CEDF"  FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="14"  RenderTransformOrigin="0.655,-1.374"  />
+        <Label x:Name="Teacher2_inf" Margin="58,150,0,403" VerticalContentAlignment="Center" Width="400" HorizontalAlignment="Left" Background="#FF54CEDF" Foreground="White" BorderBrush="#FF54CEDF"  FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="14"  RenderTransformOrigin="0.655,-1.374"  />
+        <Label x:Name="Teacher3_inf" Margin="58,282,0,271" VerticalContentAlignment="Center" Width="400" HorizontalAlignment="Left" Background="#FF54CEDF" Foreground="White" BorderBrush="#FF54CEDF"  FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="14"  RenderTransformOrigin="0.655,-1.374"  />
+        <Label x:Name="Teacher4_inf" Margin="58,347,0,206" VerticalContentAlignment="Center" Width="400" HorizontalAlignment="Left" Background="#FF54CEDF" Foreground="White" BorderBrush="#FF54CEDF" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="14"  RenderTransformOrigin="0.655,-1.374"  />
+        <Label x:Name="Teacher5_inf" Margin="58,412,0,141" VerticalContentAlignment="Center" Width="400" HorizontalAlignment="Left" Background="#FF54CEDF" Foreground="White" BorderBrush="White"  FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="14"  RenderTransformOrigin="0.641,-0.321"  />
+        <Label x:Name="Phone1" Content="Phone" Margin="68,521,0,46" VerticalContentAlignment="Center" Width="71" HorizontalAlignment="Left" Background="#FF54CEDF" Foreground="White" BorderBrush="White"  FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="18"  RenderTransformOrigin="0.641,-0.321"  />
+        <Label x:Name="Name1" Content="Name" Margin="68,468,0,98" VerticalContentAlignment="Center" Width="71" HorizontalAlignment="Left" Background="#FF54CEDF" Foreground="White" BorderBrush="White"  FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="18"  RenderTransformOrigin="0.641,-0.321"  />
+        <TextBox Name="Phone_Number" Margin="184,521,0,46" Height="33" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="147" HorizontalAlignment="Left"  Background="White" RenderTransformOrigin="-0.011,0.543" BorderBrush="#FF54CEDF" />
+        <TextBox Name="User_Name" Margin="184,468,0,98" Height="34" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="147" HorizontalAlignment="Left"  Background="White" RenderTransformOrigin="0.215,0.467" BorderBrush="#FF54CEDF" />
+        <Button x:Name="Phone" Content="Call back" Margin="358,468,0,0" VerticalAlignment="Top" Height="34" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="90" HorizontalAlignment="Left"  Background="#FF54CEDF" Foreground="White" BorderBrush="#FF54CEDF" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="16"/>
+        <Button x:Name="Close" Content="Close" Margin="358,521,0,0" VerticalAlignment="Top" Height="33" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="90" HorizontalAlignment="Left"  Background="#FF54CEDF" Foreground="White" BorderBrush="#FF54CEDF" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="16"/>
 
 
 
