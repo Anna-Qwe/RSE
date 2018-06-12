@@ -23,8 +23,8 @@
 
             </DataGrid.Columns>
         </DataGrid>
-        <TextBox x:Name="Answer" Height="30" Margin="147,280,0,80" TextWrapping="Wrap" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="97" HorizontalAlignment="Left" Background="White" BorderBrush="#FF54CEDF" Grid.ColumnSpan="2" />
-        <Button x:Name="Next" Content="Another option" Margin="47,315,0,0" VerticalAlignment="Top" Height="31" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="118" HorizontalAlignment="Left"  Background="#FF54CEDF" Foreground="White" BorderBrush="White" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="16"/>
+        <TextBox x:Name="CorrectAnswers" Height="30" Margin="147,280,0,80" TextWrapping="Wrap" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="97" HorizontalAlignment="Left" Background="White" BorderBrush="#FF54CEDF" Grid.ColumnSpan="2" />
+        <Button x:Name="Next" Content="Another variant" Margin="47,315,0,0" VerticalAlignment="Top" Height="31" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="118" HorizontalAlignment="Left"  Background="#FF54CEDF" Foreground="White" BorderBrush="White" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="16"/>
         <Button x:Name="Teacher" Content="Find a teacher" Margin="219,315,0,0" VerticalAlignment="Top" Height="31" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="118" HorizontalAlignment="Left"  Background="#FF54CEDF" Foreground="White" BorderBrush="White" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="16" RenderTransformOrigin="0.518,1.704"/>
 
 

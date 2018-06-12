@@ -25,7 +25,6 @@ namespace RSE
     public partial class MainWindow : Window
     {
         IRepository _repo = Factory.Instance.GetRepository();
-        public event Action RegistrationFinished;
 
         private void ButtonRegister_Click(object sender, RoutedEventArgs e)
         {
