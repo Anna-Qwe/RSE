@@ -1,5 +1,6 @@
 ﻿using RSE.Core;
 using RSE.Core.Interfaces;
+using RSE.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,6 +22,7 @@ namespace RSE
     /// </summary>
     public partial class ChooseVariant : Window
     {
+
         IRepository _repo = Factory.Instance.GetRepository();
 
         public ChooseVariant()
@@ -28,11 +30,23 @@ namespace RSE
             InitializeComponent();
         }
 
-        internal void OpenVariant(int variantId)
+        private void OpenVariant(Variant variant)
         {
-            TaskWindow taskWindow = new TaskWindow ();
+            var taskWindow = new TaskWindow(variant);
             taskWindow.InitializeComponent();
             taskWindow.Show();
         }
+
+        private void ButtonStart_Click(object sender, RoutedEventArgs e)
+        {
+            var selected = (int)comboBoxVariants.SelectedIndex;
+            if (selected != -1)
+            {
+                var variant = _repo.Variants.FirstOrDefault(v => v.Name == selected + 1);
+
+                if (variant != null) OpenVariant(variant);
+            }
+        }
     }
 }
+

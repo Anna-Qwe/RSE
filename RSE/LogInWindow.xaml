@@ -13,9 +13,9 @@
         <Label x:Name="Label_Name" Content="Russian State Exam" Margin="10,46,0,0" VerticalAlignment="Top" Height="93" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="263" HorizontalAlignment="Left" Background="White" Foreground="DarkGreen" FontFamily="Comic Sans Ms" FontSize="25"/>
         <TextBox x:Name="TextBox_Login" Height="30" Margin="85,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="170" HorizontalAlignment="Left"/>
         <Label x:Name="Label_Password" Content="Password" Margin="10,257,0,0" VerticalAlignment="Top" Height="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="70" HorizontalAlignment="Left" Foreground="White" FontFamily="Comic Sans Ms" FontSize="14"/>
-     
+
         <PasswordBox x:Name="PasswordBox_Password" HorizontalAlignment="Left" Margin="85,257,0,0" VerticalAlignment="Top" Width="170" Height="30" VerticalContentAlignment="Center"/>
-      
+
         <Button Click="ButtonLogin_Click" Content="Login" Margin="25,305,0,0" VerticalAlignment="Top" Height="30" HorizontalAlignment="Left" Width="98" Background="White" FontFamily="Comic Sans Ms" FontSize="14"/>
         <Button Click="ButtonRegister_Click" Content="Register" Margin="166,305,0,0" VerticalAlignment="Top"  Height="30" HorizontalAlignment="Left" Width="98" Background="White" FontFamily="Comic Sans Ms" FontSize="14"/>
 

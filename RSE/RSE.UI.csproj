@@ -70,15 +70,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Answer.cs" />
     <Compile Include="FinishWindow.xaml.cs">
       <DependentUpon>FinishWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="GetTeacherWindow.xaml.cs">
       <DependentUpon>GetTeacherWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Programs.cs" />
-    <Compile Include="registration.xaml.cs">
-      <DependentUpon>registration.xaml</DependentUpon>
     </Compile>
     <Compile Include="TaskWindow.xaml.cs">
       <DependentUpon>TaskWindow.xaml</DependentUpon>
@@ -110,10 +107,6 @@
       <DependentUpon>LogInWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="registration.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="TaskWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
