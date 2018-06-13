@@ -59,8 +59,10 @@ namespace RSE.Core
         {
             if (login == String.Empty)
             {
+               
                 return false;
             }
+
             string hashedPassword = PasswordHelper.GetHash(password);
             User user = context.Users.SingleOrDefault(x => x.Login == login && x.Password == hashedPassword);
             if (user != null)
@@ -76,13 +78,13 @@ namespace RSE.Core
         {
             if (!UserInfoHelper.CheckUser(user))
             {
-                errMessage = "Empty username";
+                errMessage = "Empty login";
                 return false;
             }
             User found = context.Users.SingleOrDefault(x => x.Login == user.Login);
             if (found != null)
             {
-                errMessage = "User with same username already exists";
+                errMessage = "User with same login already exists";
                 return false;
             }
 

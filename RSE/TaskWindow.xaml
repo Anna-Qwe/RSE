@@ -10,6 +10,7 @@
         <Grid Height="500" VerticalAlignment="Top" HorizontalAlignment="Left" Width="744" Background="White" Margin="24,47,0,0">
         </Grid>
         <TextBox  Name="TextBoxDesc" Height="291" Margin="45,72,0,237" VerticalAlignment="Center"  TextWrapping="Wrap" Width="702" HorizontalAlignment="Left" Background="White" RenderTransformOrigin="0.655,-1.374" DataContext="{Binding Exercise.Description}" BorderBrush="#FF54CEDF"/>
+        <Image Width="100" Source="{Binding Path=ImgURL}"/>
         <TextBox Name="TextBoxAnswer" Height="45" Margin="279,376,0,179" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="237" HorizontalAlignment="Left"  Background="White" BorderBrush="#FF54CEDF" />
         <Button Click="ButtonNext_Click"  Content="Next task" Margin="518,432,0,0" VerticalAlignment="Top" Height="45" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="161" HorizontalAlignment="Left"  Background="#FF54CEDF" Foreground="White" BorderBrush="#FF54CEDF" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="24"/>
         <Button Click="ButtonPrevious_Click" Content="Previous task" Margin="113,432,0,0" VerticalAlignment="Top" Height="45" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="161" HorizontalAlignment="Left"  Background="#FF54CEDF" Foreground="White" BorderBrush="#FF54CEDF" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="24" RenderTransformOrigin="0.654,0.385"/>

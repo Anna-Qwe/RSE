@@ -54,10 +54,7 @@ namespace RSE
                 chooseVariant.Show();
                 Hide();
             }
-            else
-            {
-                MessageBox.Show("Incorrect login/password");
-            }
+           
         }
     }
 }
