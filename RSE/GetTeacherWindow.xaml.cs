@@ -21,7 +21,7 @@ namespace RSE
     /// <summary>
     /// Логика взаимодействия для GetTeacherWindow.xaml
     /// </summary>
-    public partial class GetTeacherWindow : Page
+    public partial class GetTeacherWindow : Window
     {
         IRepository _repo = Factory.Instance.GetRepository();
         public GetTeacherWindow()

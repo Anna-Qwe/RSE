@@ -23,8 +23,8 @@
             </DataGrid.Columns>
         </DataGrid>
         <TextBox x:Name="CorrectAnswers" Height="44" Margin="306,452,0,104" TextWrapping="Wrap" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="173" HorizontalAlignment="Left" Background="White" BorderBrush="#FF54CEDF" />
-        <Button x:Name="Next" Content="Another variant" Margin="111,486,0,0" VerticalAlignment="Top" Height="44" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="173" HorizontalAlignment="Left"  Background="#FF54CEDF" Foreground="White" BorderBrush="White" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="20"/>
-        <Button x:Name="Teacher" Content="Find a teacher" Margin="507,486,0,0" VerticalAlignment="Top" Height="44" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="173" HorizontalAlignment="Left"  Background="#FF54CEDF" Foreground="White" BorderBrush="White" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="20" RenderTransformOrigin="0.518,1.704"/>
+        <Button Click="ButtonAnotherVariant_Click" x:Name="Next" Content="Another variant" Margin="111,486,0,0" VerticalAlignment="Top" Height="44" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="173" HorizontalAlignment="Left"  Background="#FF54CEDF" Foreground="White" BorderBrush="White" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="20"/>
+        <Button Click="ButtonFindTeacher_Click" x:Name="Teacher" Content="Find a teacher" Margin="507,486,0,0" VerticalAlignment="Top" Height="44" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="173" HorizontalAlignment="Left"  Background="#FF54CEDF" Foreground="White" BorderBrush="White" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="20" RenderTransformOrigin="0.518,1.704"/>
 
 
 

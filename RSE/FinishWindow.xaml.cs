@@ -38,5 +38,18 @@ namespace RSE
 
             CorrectAnswers.Text = correctAnswers.ToString();
         }
+        
+        private void ButtonAnotherVariant_Click(object sender, RoutedEventArgs e)
+        {
+            Hide();
+        }
+
+        private void ButtonFindTeacher_Click(object sender, RoutedEventArgs e)
+        {
+            var window = new GetTeacherWindow();
+            window.Show();
+
+            Hide();
+        }
     }
 }
