@@ -24,9 +24,9 @@ namespace RSE
     {
         IRepository _repo = Factory.Instance.GetRepository();
         List<Exercise> Exercises;
-        private int _currentExerciseId = 0;
+        private int _currentExerciseId = 1;
         private Answer Answer { get; set; }
-        private Answer[] Answers { get; set; }
+        private List<Answer> Answers { get; set; }
 
         public TaskWindow(Variant CurrentVariant)
         {
@@ -35,27 +35,34 @@ namespace RSE
             if (CurrentVariant != null)
             {
                 Exercises = _repo.Exercises.Where(e => e.Variant.Id == CurrentVariant.Id).ToList();
-                Answers = new Answer[12];
+                Answers = new List<Answer>();
                 UpdateWindow();
             }
         }
 
         public void UpdateAnswers(int currentExerciseId, string UserAnswer)
         {
-            var currentExercise = Exercises.FirstOrDefault(e => e.Number == currentExerciseId + 1);
+            var currentExercise = Exercises.FirstOrDefault(e => e.Number == currentExerciseId);
+            var ans = Answers.FirstOrDefault(a => a.ExerciseId == currentExercise.Number);
+                
+            var addAnswer = false;
+            if (ans == null)
+            {
+                ans = new Answer();
+                addAnswer = true;
+            }
 
-            var ans = new Answer();
             ans.ExerciseId = currentExercise.Number;
             ans.UserAnswer = UserAnswer;
             ans.CorrectAnswer = currentExercise.Answer.ToString();
 
-            Answers[currentExerciseId] = ans;
+            if(addAnswer) Answers.Add(ans);
         }
 
         public void UpdateWindow()
         {
-            var nextExercise = Exercises.FirstOrDefault(e => e.Number == _currentExerciseId + 1);
-            var ans = Answers[_currentExerciseId];
+            var nextExercise = Exercises.FirstOrDefault(e => e.Number == _currentExerciseId);
+            var ans = Answers.FirstOrDefault(a => a.ExerciseId == nextExercise.Number);
 
             TextBoxDesc.Text = nextExercise.Description;
             if (ans != null) TextBoxAnswer.Text = ans.UserAnswer;
@@ -66,7 +73,7 @@ namespace RSE
         {
             var UserAnswer = TextBoxAnswer.Text;
             UpdateWindow();
-            UpdateAnswers(_currentExerciseId + 1, UserAnswer);
+            UpdateAnswers(_currentExerciseId, UserAnswer);
             FinishWindow variantFinished = new FinishWindow(Answers);
             variantFinished.Show();
             Hide();
@@ -76,7 +83,7 @@ namespace RSE
         {
             var id = _currentExerciseId;
             var UserAnswer = TextBoxAnswer.Text;
-            if (_currentExerciseId == 0) return;
+            if (_currentExerciseId == 1) _currentExerciseId = Exercises.Count;
             else _currentExerciseId--;
 
             UpdateWindow();
@@ -87,7 +94,7 @@ namespace RSE
         {
             var id = _currentExerciseId;
             var UserAnswer = TextBoxAnswer.Text;
-            if (_currentExerciseId == Exercises.Count - 1) return;
+            if (_currentExerciseId == Exercises.Count) _currentExerciseId = 1;
             else _currentExerciseId++;
 
             UpdateWindow();
