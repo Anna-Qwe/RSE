@@ -72,18 +72,23 @@ namespace RSE.Core
             return false;
         }
 
-        public void RegisterUser(User user)
+        public bool RegisterUser(User user, ref string errMessage)
         {
             if (!UserInfoHelper.CheckUser(user))
             {
-                throw new InvalidOperationException("Empty username");
+                errMessage = "Empty username";
+                return false;
             }
             User found = context.Users.SingleOrDefault(x => x.Login == user.Login);
             if (found != null)
-                throw new InvalidOperationException("User with same username already exists");
+            {
+                errMessage = "User with same username already exists";
+                return false;
+            }
 
             context.Users.Add(user);
             context.SaveChanges();
+            return true;
         }
     }
 }

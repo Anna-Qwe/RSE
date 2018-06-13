@@ -33,17 +33,16 @@ namespace RSE
                 Login = TextBox_Login.Text,
                 Password = PasswordHelper.GetHash(PasswordBox_Password.Password)
             };
-
-            try
+            string errMessage = "";
+            if (_repo.RegisterUser(user, ref errMessage))
             {
-                _repo.RegisterUser(user);          
                 ChooseVariant chooseVariant = new ChooseVariant();
                 chooseVariant.Show();
                 Hide();
             }
-            catch(InvalidOperationException ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(errMessage);
             }
         }
 
