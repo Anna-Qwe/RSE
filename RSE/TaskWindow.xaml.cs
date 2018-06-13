@@ -40,35 +40,40 @@ namespace RSE
             }
         }
 
-        public void UpdateAnswers(Exercise currentExercise)
+        public void UpdateAnswers(int currentExerciseId, string UserAnswer)
         {
-            var userAnswer = TextBoxAnswer.Text;
-
-            if (userAnswer != "")
+            var currentExercise = Exercises.FirstOrDefault(e => e.Number == currentExerciseId);
+            var ans = Answers.FirstOrDefault(a => a.ExerciseId == currentExercise.Number);
+                
+            var addAnswer = false;
+            if (ans == null)
             {
-                var ans = new Answer
-                {
-                    ExerciseId = currentExercise.Id,
-                    UserAnswer = userAnswer,
-                    CorrectAnswer = currentExercise.Answer.ToString()
-                };
-
-                Answers.Add(ans);
-                TextBoxAnswer.Text = "";
+                ans = new Answer();
+                addAnswer = true;
             }
+
+            ans.ExerciseId = currentExercise.Number;
+            ans.UserAnswer = UserAnswer;
+            ans.CorrectAnswer = currentExercise.Answer.ToString();
+
+            if(addAnswer) Answers.Add(ans);
         }
 
         public void UpdateWindow()
         {
-            var currentExercise = Exercises.FirstOrDefault(e => e.Number == _currentExerciseId);
+            var nextExercise = Exercises.FirstOrDefault(e => e.Number == _currentExerciseId);
+            var ans = Answers.FirstOrDefault(a => a.ExerciseId == nextExercise.Number);
 
-            UpdateAnswers(currentExercise);
-            TextBoxDesc.Text = currentExercise.Description;
+            TextBoxDesc.Text = nextExercise.Description;
+            if (ans != null) TextBoxAnswer.Text = ans.UserAnswer;
+            else TextBoxAnswer.Text = "";
         }
 
         private void ButtonFinish_Click(object sender, RoutedEventArgs e)
         {
+            var UserAnswer = TextBoxAnswer.Text;
             UpdateWindow();
+            UpdateAnswers(_currentExerciseId, UserAnswer);
             FinishWindow variantFinished = new FinishWindow(Answers);
             variantFinished.Show();
             Hide();
@@ -76,18 +81,24 @@ namespace RSE
 
         private void ButtonPrevious_Click(object sender, RoutedEventArgs e)
         {
-            UpdateWindow();
-
-            if (_currentExerciseId == 1) _currentExerciseId = 5;
+            var id = _currentExerciseId;
+            var UserAnswer = TextBoxAnswer.Text;
+            if (_currentExerciseId == 1) _currentExerciseId = Exercises.Count;
             else _currentExerciseId--;
+
+            UpdateWindow();
+            UpdateAnswers(id, UserAnswer);
         }
 
         private void ButtonNext_Click(object sender, RoutedEventArgs e)
         {
-            UpdateWindow();
-
-            if (_currentExerciseId == 5) _currentExerciseId = 1;
+            var id = _currentExerciseId;
+            var UserAnswer = TextBoxAnswer.Text;
+            if (_currentExerciseId == Exercises.Count) _currentExerciseId = 1;
             else _currentExerciseId++;
+
+            UpdateWindow();
+            UpdateAnswers(id, UserAnswer);
         }
     }
 }

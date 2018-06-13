@@ -26,17 +26,19 @@ namespace RSE.Core
             return _authorizedUser;
         }
 
-        public void SaveUserPhone (int phone)
+        public void SaveUserInfo(string email, string name)
         {
-            var phoneToSave = context.Users.SingleOrDefault(x => x.Id == _authorizedUser.Id && x.Phone == phone);
-            if (phoneToSave == null)
+            var emailToSave = context.Users.SingleOrDefault(x => x.Id == _authorizedUser.Id && x.Email == email);
+            var nameToSave = context.Users.Single(x => x.Id == _authorizedUser.Id && x.Name == name);
+            if (emailToSave == null)
             {
-                phoneToSave.Phone = phone;
+                emailToSave.Email = email;
+                nameToSave.Name = name;
             }
-            context.Users.Add(phoneToSave);
+            context.Users.Add(emailToSave);
+            context.Users.Add(nameToSave);
             context.SaveChanges();
         }
-
         public List<int> WrongAnswers (int answer, int numbOfTask,  Variant variant)
         {
             List<int> WrongAnswers = new List<int>();

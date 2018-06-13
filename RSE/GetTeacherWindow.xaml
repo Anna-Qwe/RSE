@@ -20,7 +20,8 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <TextBlock Name="TextBlockPhone">Phone</TextBlock>
-        <TextBox Name="textBoxPhone" Margin="5" Grid.Column="1"></TextBox>
+        <TextBox Name="textBoxEmail" Margin="5" Grid.Column="1"></TextBox>
+        <TextBox Name="textBoxName" Margin="5" Grid.Column="1"></TextBox>
         <StackPanel Grid.Row="4" Grid.ColumnSpan="2" VerticalAlignment="Top" HorizontalAlignment="Center" Orientation="Horizontal">
             <Button Width="100" Margin="5 20" Click="ButtonDontWant_Click">Register</Button>
             <Button Width="100" Margin="5 20" Click="ButtonDontWant_Click">I don't want, thank you</Button>

@@ -35,15 +35,16 @@ namespace RSE
             Close();
         }
 
-        //private void ButtonCall_Click(object sender, RoutedEventArgs e)
-        //{
-        //     var phone = textBoxPhone.Try
-        //    if (!string.IsNullOrWhiteSpace(textBoxPhone.Text))
-        //    {
-        //        _repo.SaveUserPhone(textBoxPhone)
-        //    }
-         
-        //}
+        private void ButtonCall_Click(object sender, RoutedEventArgs e)
+        {
+            var email = textBoxEmail.ToString();
+            var name = textBoxName.ToString();
+            if (!string.IsNullOrWhiteSpace(email) && string.IsNullOrEmpty(name))
+            {
+                _repo.SaveUserInfo(phone, name);
+            }
+
+        }
 
         private void Close()
         {

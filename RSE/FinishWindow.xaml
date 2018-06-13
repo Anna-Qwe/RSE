@@ -15,11 +15,11 @@
 
 
         <Label x:Name="Test" Content="You've completed the test" Height="65" Margin="47,25,0,300" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="290" HorizontalAlignment="Left" Background="White" Foreground="#FF54CEDF"  FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="24"  RenderTransformOrigin="0.655,-1.374" Grid.ColumnSpan="2"  />
-        <DataGrid Name="dataGridAnswer" Margin="72,90,0,124" AutoGenerateColumns="True" Background="White" HorizontalAlignment="Left" Width="238" Grid.ColumnSpan="2">
+        <DataGrid ItemsSource="{Binding Answers}" Name="dataGridAnswer" Margin="72,90,0,124" AutoGenerateColumns="False" Background="White" HorizontalAlignment="Left" Width="238" Grid.ColumnSpan="2">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="№" Binding="{Binding }" Width="25" />
-                <DataGridTextColumn Header="Your Answer" Binding="{Binding }" Width="100"/>
-                <DataGridTextColumn Header="Right Answer" Binding="{Binding RouteName}" Width="100"/>
+                <DataGridTextColumn Header="№" Binding="{Binding ExerciseId}" Width="25" />
+                <DataGridTextColumn Header="Your Answer" Binding="{Binding UserAnswer}" Width="100"/>
+                <DataGridTextColumn Header="Right Answer" Binding="{Binding CorrectAnswer}" Width="100"/>
 
             </DataGrid.Columns>
         </DataGrid>
