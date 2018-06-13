@@ -101,6 +101,10 @@
     <Compile Include="Migrations\201806111845339_delete_email.Designer.cs">
       <DependentUpon>201806111845339_delete_email.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806131123573_updates.cs" />
+    <Compile Include="Migrations\201806131123573_updates.Designer.cs">
+      <DependentUpon>201806131123573_updates.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Exercise.cs" />
     <Compile Include="Models\FullINfo.cs" />
@@ -145,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806111845339_delete_email.resx">
       <DependentUpon>201806111845339_delete_email.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806131123573_updates.resx">
+      <DependentUpon>201806131123573_updates.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
