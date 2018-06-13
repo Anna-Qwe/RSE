@@ -24,7 +24,7 @@ namespace RSE
     {
         IRepository _repo = Factory.Instance.GetRepository();
 
-        public FinishWindow(List<Answer> answers)
+        public FinishWindow(Answer[] answers)
         {
             InitializeComponent();
             dataGridAnswer.ItemsSource = answers;
