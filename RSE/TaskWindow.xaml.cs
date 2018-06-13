@@ -83,7 +83,7 @@ namespace RSE
         {
             var id = _currentExerciseId;
             var UserAnswer = TextBoxAnswer.Text;
-            if (_currentExerciseId == 1) _currentExerciseId = Exercises.Count;
+            if (_currentExerciseId == 1) return;
             else _currentExerciseId--;
 
             UpdateWindow();
@@ -94,7 +94,7 @@ namespace RSE
         {
             var id = _currentExerciseId;
             var UserAnswer = TextBoxAnswer.Text;
-            if (_currentExerciseId == Exercises.Count) _currentExerciseId = 1;
+            if (_currentExerciseId == Exercises.Count) return;
             else _currentExerciseId++;
 
             UpdateWindow();
