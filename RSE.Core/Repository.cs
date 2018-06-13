@@ -57,6 +57,10 @@ namespace RSE.Core
 
         public bool Authorize(string login, string password)
         {
+            if (login == String.Empty)
+            {
+                return false;
+            }
             string hashedPassword = PasswordHelper.GetHash(password);
             User user = context.Users.SingleOrDefault(x => x.Login == login && x.Password == hashedPassword);
             if (user != null)
@@ -70,9 +74,13 @@ namespace RSE.Core
 
         public void RegisterUser(User user)
         {
+            if (!UserInfoHelper.CheckUser(user))
+            {
+                throw new InvalidOperationException("Empty username");
+            }
             User found = context.Users.SingleOrDefault(x => x.Login == user.Login);
             if (found != null)
-                throw new InvalidOperationException("Dublicate username");
+                throw new InvalidOperationException("User with same username already exists");
 
             context.Users.Add(user);
             context.SaveChanges();

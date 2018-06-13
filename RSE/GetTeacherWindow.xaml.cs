@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using RSE.Core.Helpers;
 
 namespace RSE
 {
@@ -39,11 +40,12 @@ namespace RSE
         {
             var email = textBoxEmail.ToString();
             var name = textBoxName.ToString();
-            if (!string.IsNullOrWhiteSpace(email) && string.IsNullOrEmpty(name))
+            if (!UserInfoHelper.CheckUser(email, name))
             {
-                _repo.SaveUserInfo(phone, name);
+                MessageBox.Show("Invalid email or name");
+                return;
             }
-
+            _repo.SaveUserInfo(email, name);
         }
 
         private void Close()

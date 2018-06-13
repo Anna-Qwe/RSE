@@ -41,9 +41,9 @@ namespace RSE
                 chooseVariant.Show();
                 Hide();
             }
-            catch
+            catch(InvalidOperationException ex)
             {
-                MessageBox.Show("An error occured trying to save new user");
+                MessageBox.Show(ex.Message);
             }
         }
 
