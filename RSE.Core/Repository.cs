@@ -28,15 +28,8 @@ namespace RSE.Core
 
         public void SaveUserInfo(string email, string name)
         {
-            var emailToSave = context.Users.SingleOrDefault(x => x.Id == _authorizedUser.Id && x.Email == email);
-            var nameToSave = context.Users.Single(x => x.Id == _authorizedUser.Id && x.Name == name);
-            if (emailToSave == null)
-            {
-                emailToSave.Email = email;
-                nameToSave.Name = name;
-            }
-            context.Users.Add(emailToSave);
-            context.Users.Add(nameToSave);
+            _authorizedUser.Email = email;
+            _authorizedUser.Name = name;
             context.SaveChanges();
         }
         public List<int> WrongAnswers (int answer, int numbOfTask,  Variant variant)

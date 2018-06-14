@@ -54,7 +54,11 @@ namespace RSE
                 chooseVariant.Show();
                 Hide();
             }
-           
+           else
+            {
+                MessageBox.Show("Invalid login or password");
+            }
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
