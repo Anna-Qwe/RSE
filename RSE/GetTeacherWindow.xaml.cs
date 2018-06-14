@@ -40,9 +40,9 @@ namespace RSE
 
         private void ButtonCall_Click(object sender, RoutedEventArgs e)
         {
-            var email = TextBox_Email.ToString();
-            var name = TextBox_Name.ToString();
-            if (!UserInfoHelper.CheckUser(email, name))
+            var email = TextBox_Email.Text;
+            var name = TextBox_Name.Text;
+                if (!UserInfoHelper.CheckUser(email, name))
             {
                 MessageBox.Show("Invalid email or name");
                 return;

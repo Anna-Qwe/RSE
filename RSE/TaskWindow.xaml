@@ -5,43 +5,39 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RSE"
         mc:Ignorable="d"
-       WindowStyle="None" 
-Height="400" Width="500" HorizontalAlignment="Center" VerticalAlignment="Center" Background="LightBlue" >
-  
-    <Grid >
+       WindowStyle="SingleBorderWindow" 
+Height="594.932" Width="500" HorizontalAlignment="Center" VerticalAlignment="Center" Background="LightBlue" >
+
+    <Grid Margin="0,0,0,2" >
         <Grid.RowDefinitions >
             <RowDefinition Height="50"/>
             <RowDefinition Height="50"/>
-            <RowDefinition Height="150"/>
-            <RowDefinition Height="80"/>
-            <RowDefinition Height="120"/>
+            <RowDefinition Name ="PictureRow" Height="132"/>
+            <RowDefinition Height="164"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <TextBlock Text="It's time to work!" FontSize="24" Margin="5" FontFamily="Showcard Gothic" Foreground="#FF4E299E"/>
-        <TextBlock Grid.ColumnSpan="2" HorizontalAlignment="Right" Margin="5" Grid.Row="1" Text="We believe, you can do it perfectly" 
-TextWrapping="Wrap" FontSize="24" FontFamily="Leelawadee UI" Foreground="#FF8934B0" />
-        
-        <TextBlock Text="{Binding Exercise.Description}" Name="TextBlockDesc" Height="150" Grid.Row="2" TextWrapping="Wrap" Grid.ColumnSpan="2" Margin="8"/>
-        <Image  Name="DescURL" Grid.Row="2" Grid.Column="1" Width="64"
-       Height="64"
-       VerticalAlignment="Top"
-       Margin="0,0,0,0"
-       HorizontalAlignment="Center"  />
+        <TextBlock Grid.ColumnSpan="2" HorizontalAlignment="Right" Margin="0,5,5,5" Grid.Row="1" Text="We believe, you can do it perfectly" 
+TextWrapping="Wrap" FontSize="24" FontFamily="Leelawadee UI" Foreground="#FF8934B0" Width="364" />
+        <Image  Name="DescURL" Grid.Row="2" Width="293"
+       Margin="-47,10,0,10"
+       HorizontalAlignment="Center" RenderTransformOrigin="-1.804,1.907"  />
         <TextBlock Text="Your answer:" VerticalAlignment="Top" HorizontalAlignment="Right" FontFamily="Segoe UI Semilight" 
-Margin="10" Grid.Row="3" Foreground="#FF9525C9" FontSize="22" Name="TextBlockAnswer" />
-  
+Margin="0,219,9,-83" Grid.Row="3" Foreground="#FF9525C9" FontSize="22" Name="TextBlockAnswer" Height="29" Width="120" />
+
 
         <TextBox Name="TextBoxAnswer" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Left" BorderBrush="#FF9525C9" BorderThickness="1" 
-Margin="10" Grid.Row="3" Height="30" Width="120"/>
+Margin="10,219,0,-84" Grid.Row="3" Height="30" Width="120"/>
 
-        <StackPanel Orientation="Horizontal" Margin="0 0 0 80" Grid.Row="4" Grid.ColumnSpan="2" HorizontalAlignment="Center" >
+        <StackPanel Orientation="Horizontal" Margin="85,254,77,-174" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Center" Width="330" >
             <Button Margin="0 0 20 0" Content="Previous" Click="ButtonPrevious_Click" FontSize="14" Background="#FF4E299E" FontFamily="Segoe UI" Width="90"/>
             <Button Margin="0 0 20 0" Content="Next" Click="ButtonNext_Click" FontSize="14" FontFamily="Segoe UI" Background="#FF4E299E" Width="90"/>
             <Button Margin="0 0 20 0" Click="ButtonFinish_Click" Content="Finish" FontSize="14" FontFamily="Segoe UI" Width="90" BorderBrush="#00673AB7" Background="#FF8934B0"/>
         </StackPanel>
+        <TextBlock Name="TextBlockDesc" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="204" Margin="10,10,0,-49" Grid.Row="3" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="472"/>
     </Grid>
 
 </Window>

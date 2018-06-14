@@ -68,8 +68,15 @@ namespace RSE
 
             TextBlockDesc.Text = nextExercise.Description;
 
+            if(nextExercise.ImgURL == "")
+            {
+                PictureRow.Height = new GridLength(0);
+            }
+
             if(nextExercise.ImgURL != "")
             {
+                PictureRow.Height = new GridLength(150);
+
                 BitmapImage img = new BitmapImage();
                 img.BeginInit();
                 img.UriSource = new Uri(nextExercise.ImgURL);

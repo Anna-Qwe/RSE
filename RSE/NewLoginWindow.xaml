@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         xmlns:wpf="clr-namespace:RSE" 
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        Title="Login" Height="350" Width="280" WindowStyle="None" Background="Transparent">
+        Title="Login" Height="350" Width="280" WindowStyle="SingleBorderWindow" Background="Transparent">
     <Grid Background="White" >
         <Grid>
             <StackPanel Margin="10,0,30,0" >
@@ -25,8 +25,8 @@
                 </StackPanel>
 
                 <StackPanel VerticalAlignment="Center" Orientation="Horizontal" />
-                <Button VerticalAlignment="Center" Content="Login" FontFamily="Impact" Margin="20" FontSize="14" Width="80" Background="#FF4E299E" BorderBrush="#FF307CD6"/>
-                <Button VerticalAlignment="Center" Content="Register" FontFamily="Impact" FontSize="14" Width="80" Background="#FF4E299E" BorderBrush="#FF307CD6" />
+                <Button VerticalAlignment="Center" Content="Login" FontFamily="Impact" Margin="20" FontSize="14" Width="80" Background="#FF4E299E" BorderBrush="#FF307CD6" Click="ButtonLogin_Click"/>
+                <Button VerticalAlignment="Center" Content="Register" FontFamily="Impact" FontSize="14" Width="80" Background="#FF4E299E" BorderBrush="#FF307CD6" Click="ButtonRegister_Click" />
             </StackPanel>
 
 

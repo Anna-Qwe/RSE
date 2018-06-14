@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         TextOptions.TextFormattingMode="Ideal" TextOptions.TextRenderingMode="Auto"     
         Foreground="{DynamicResource MaterialDesignFont}"
-        Height="550" Width="380" WindowStyle="None" Background="LightSteelBlue" >
+        Height="550" Width="380" WindowStyle="SingleBorderWindow" Background="LightSteelBlue" >
     <Grid >
         <StackPanel HorizontalAlignment="Center" Margin="0 35 0 0">
             <TextBlock FontFamily="Levenim MT" TextWrapping="Wrap" Text="Choose your lucky variant "  FontSize="30" Foreground="#FFFDF9F9" FontWeight="Bold" />
@@ -21,7 +21,7 @@
             <ListBoxItem Content="Variant 3"/>
             <ListBoxItem Content="Variant 4"/>
             <ListBoxItem Content="Variant 5" />
-            <ListBoxItem Content="Variant 5" />
+           
 
         </ListBox>
         <Button x:Name="Start"  Click="ButtonStart_Click" Content="Start" Margin="102,460,0,0"

@@ -15,7 +15,7 @@ namespace RSE.Core.Interfaces
 
         List<int> WrongAnswers(int answer, int numbOfTask, Variant variant);
         bool Authorize(string login, string password);
-        bool RegisterUser(User user);
+        bool RegisterUser(User user, ref string errMessage);
         void SaveUserInfo(string email, string name);
         User GetAuthorizedUser();
     }

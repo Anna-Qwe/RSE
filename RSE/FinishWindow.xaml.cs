@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 using RSE.Core;
 using RSE.Core.Interfaces;
 using RSE.Core.Models;
+using System.Data;
 
 namespace RSE
 {
@@ -27,14 +28,50 @@ namespace RSE
         public FinishWindow(List<Answer> answers)
         {
             InitializeComponent();
-            dataGridAnswer.ItemsSource = answers;
+            DataTable table = new DataTable();
+
+            DataColumn column;
+            DataRow row;
+
+            // Create new DataColumn, set DataType, 
+            // ColumnName and add to DataTable.    
+            column = new DataColumn();
+            column.DataType = System.Type.GetType("System.Int32");
+            column.ColumnName = "id";
+            column.ReadOnly = true;
+            column.Unique = true;
+            // Add the Column to the DataColumnCollection.
+            table.Columns.Add(column);
+
+            column = new DataColumn();
+            column.DataType = System.Type.GetType("System.String");
+            column.ColumnName = "User Answer";
+            column.ReadOnly = false;
+            column.Unique = false;
+            table.Columns.Add(column);
+
+            column = new DataColumn();
+            column.DataType = System.Type.GetType("System.String");
+            column.ColumnName = "Correct Answer";
+            column.ReadOnly = false;
+            column.Unique = false;
+            table.Columns.Add(column);
+
 
             var correctAnswers = 0;
 
             foreach (var ans in answers)
             {
+                row = table.NewRow();
+                row["id"] = ans.ExerciseId;
+                row["User Answer"] = ans.UserAnswer;
+                row["Correct Answer"] = ans.CorrectAnswer;
+                table.Rows.Add(row);
+
                 if (ans.UserAnswer.ToString() == ans.CorrectAnswer.ToString()) correctAnswers++;
             }
+            dataGridAnswer.DataContext = table.DefaultView;
+
             TextBlockCorrectAns.Text = correctAnswers.ToString();
         }
         

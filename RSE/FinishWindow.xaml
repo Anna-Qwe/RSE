@@ -7,7 +7,7 @@
         mc:Ignorable="d"
          TextOptions.TextFormattingMode="Ideal" TextOptions.TextRenderingMode="Auto" 
          Height="400" Width="500" Background="LightBlue"
-        WindowStyle="None"  >
+        WindowStyle="SingleBorderWindow"  >
 
     <Grid >
 
@@ -23,12 +23,12 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <TextBlock Text="You have completed the test." FontSize="24" Margin="5" TextWrapping="Wrap" Width="500" Grid.ColumnSpan="3" />
-        <DataGrid  Grid.ColumnSpan="3" ItemsSource="{Binding Answers}" BorderThickness="1" Name="dataGridAnswer" Grid.Row="1" FontFamily="Shruti" Background="LightBlue" FontSize="20"   >
-            <DataGrid.Columns  >
+        <DataGrid  Grid.ColumnSpan="3" ItemsSource="{Binding}" BorderThickness="1" Name="dataGridAnswer" Grid.Row="1" FontFamily="Shruti" Background="LightBlue" FontSize="20"   >
+            <!--<DataGrid.Columns  >
                 <DataGridTextColumn FontSize="22" FontFamily="Shruti"  Width="100" Header="№1" Binding="{Binding ExerciseId}"  />
                 <DataGridTextColumn FontSize="22" FontFamily="Shruti" Width="200" Header="Your Answer" Binding="{Binding UserAnswer}"  />
                 <DataGridTextColumn FontSize="22" FontFamily="Shruti" Header="Correct Answer" Binding="{Binding CorrectAnswer}"  />
-            </DataGrid.Columns>
+            </DataGrid.Columns>-->
         </DataGrid>
         <StackPanel Orientation="Horizontal"  Grid.Row="2" Grid.ColumnSpan="3" HorizontalAlignment="Center">
             <Label  Grid.Row="2" HorizontalAlignment="Right" Margin="10"  Foreground="Black" FontSize="22" Content="Your score:"  />
