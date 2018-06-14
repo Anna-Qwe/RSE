@@ -35,8 +35,7 @@ namespace RSE
             {
                 if (ans.UserAnswer.ToString() == ans.CorrectAnswer.ToString()) correctAnswers++;
             }
-
-            CorrectAnswers.Text = correctAnswers.ToString();
+            TextBlockCorrectAns.Text = correctAnswers.ToString();
         }
         
         private void ButtonAnotherVariant_Click(object sender, RoutedEventArgs e)

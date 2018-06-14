@@ -1,4 +1,7 @@
-﻿using System;
+﻿using RSE.Core;
+using RSE.Core.Helpers;
+using RSE.Core.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +22,36 @@ namespace RSE
     /// </summary>
     public partial class GetTeacherWindow : Window
     {
+        IRepository _repo = Factory.Instance.GetRepository();
         public GetTeacherWindow()
         {
             InitializeComponent();
         }
+        public event Action GetCallFinish;
+
+        
+        private void ButtonDontWant_Click(object sender, RoutedEventArgs e)
+        {
+            GetCallFinish?.Invoke();
+            this.Close();
+        }
+
+
+
+        private void ButtonCall_Click(object sender, RoutedEventArgs e)
+        {
+            var email = TextBox_Email.ToString();
+            var name = TextBox_Name.ToString();
+            if (!UserInfoHelper.CheckUser(email, name))
+            {
+                MessageBox.Show("Invalid email or name");
+                return;
+            }
+            _repo.SaveUserInfo(email, name);
+
+        }
+
+
     }
 }
+

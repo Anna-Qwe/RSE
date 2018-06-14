@@ -11,6 +11,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Threading;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
@@ -29,17 +30,20 @@ namespace RSE
         {
             InitializeComponent();
         }
+        
+        
+ 
 
         private void OpenVariant(Variant variant)
         {
             var taskWindow = new TaskWindow(variant);
-            taskWindow.InitializeComponent();
+           
             taskWindow.Show();
         }
 
         private void ButtonStart_Click(object sender, RoutedEventArgs e)
         {
-            var selected = (int)comboBoxVariants.SelectedIndex;
+            var selected = (int)ListBoxVariants.SelectedIndex;
             if (selected != -1)
             {
                 var variant = _repo.Variants.FirstOrDefault(v => v.Name == selected + 1);

@@ -5,32 +5,42 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:RSE"
       mc:Ignorable="d" 
-      d:DesignHeight="600" d:DesignWidth="800" Background="#FF54CEDF"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      TextOptions.TextFormattingMode="Ideal" TextOptions.TextRenderingMode="Auto" 
+         Height="380" Width="350" HorizontalAlignment="Center" VerticalAlignment="Center"  
+        WindowStyle="None" 
       Title="GetTeacherWindow">
 
-    <Grid Margin="27,0,0,31" Height="532" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="745" Background="White" >
 
+    <Grid Background="#FF62D1D1">
+        <Grid.RowDefinitions >
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="150"/>
 
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="127*" />
-            <ColumnDefinition Width="146*" />
-            <ColumnDefinition Width="127*" />
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="130"/>
-            <RowDefinition Height="130"/>
-            <RowDefinition Height="130"/>
-            <RowDefinition Height="130"/>
+            <RowDefinition Height="100"/>
+
         </Grid.RowDefinitions>
-        <Label x:Name="Tech" Content="We can find you a teacher" Height="68" Margin="189,32,201.333,31.333" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="White" Foreground="#FF54CEDF"  FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="30"  RenderTransformOrigin="0.655,-1.374" Grid.ColumnSpan="3"  />
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Content="We can find you a teacher" Grid.ColumnSpan="2" FontFamily="Impact" FontSize="20" Margin="5" Foreground="White"/>
+        <TextBlock Text="Sometimes you need to pracrice with someone who are more experienced. We can help you to find such person. Write some information about you and we will contact you later."
+                   TextWrapping="Wrap" Grid.ColumnSpan="2" Margin="5"  Grid.Row="1" FontSize="16"/>
+        <StackPanel VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.Row="2" Orientation="Horizontal">
 
-        <TextBox Name="textBoxEmail" Margin="221,75,36.667,9.333" Grid.ColumnSpan="2" Grid.Row="3" BorderBrush="#FF54CEDF"/>
-        <TextBox Name="textBoxName" Margin="221,10,36.667,75.333" Grid.ColumnSpan="2" Grid.Row="3" BorderBrush="#FF54CEDF"/>
-        <Label x:Name="Name11" Content="Name" Margin="73,10,0,0" VerticalAlignment="Top" Height="46" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="108" HorizontalAlignment="Left" Background="White" Foreground="#FF54CEDF" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="18" RenderTransformOrigin="0.54,1.594" Grid.Row="3"/>
-        <Label x:Name="Email" Content="Email" Margin="73,76,0,0" VerticalAlignment="Top" Height="46" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="108" HorizontalAlignment="Left" Background="White" Foreground="#FF54CEDF" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="18" RenderTransformOrigin="0.54,1.594" Grid.Row="3"/>
+            <TextBox Name="TextBox_Name" Width="300" Margin="10 30" materialDesign:HintAssist.Hint="Name" FontSize="13" />
+        </StackPanel>
+        <StackPanel Margin=" 0, 16" Grid.ColumnSpan="2" Grid.Row="2" Orientation="Horizontal">
 
-        <Button Width="131" Margin="18.333,10,87.333,75.333" Click="ButtonCall_Click" Content="Call back"  HorizontalContentAlignment="Center"  Background="#FF54CEDF" Foreground="White" BorderBrush="White" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="16" Grid.Column="2" Grid.Row="3"/>
-        <Button Width="131" Margin="18.333,75,87.333,10.333" Click="ButtonDontWant_Click" Content="I don't want" HorizontalContentAlignment="Center"  Background="#FF54CEDF" Foreground="White" BorderBrush="White" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="16" Grid.Column="2" Grid.Row="3"/>
+            <TextBox x:Name="TextBox_Email" Height="40" Width="300" Margin="10 30" materialDesign:HintAssist.Hint="Email" FontSize="13" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0 0 0 70" Grid.Row="3" Grid.ColumnSpan="3" HorizontalAlignment="Center" >
+            <Button Margin="0 0 20 0" Content="Contact me" Click="ButtonCall_Click" FontSize="14" FontFamily="Segoe UI" Width="110" Background="#FF5E2AAA" />
+
+            <Button  Margin="0 0 20 0" Content="Thanks, no" Click="ButtonDontWant_Click" FontSize="14" FontFamily="Segoe UI"  Width="110" BorderBrush="#00673AB7" Background="#FF5E2AAA"/>
+        </StackPanel>
 
 
     </Grid>

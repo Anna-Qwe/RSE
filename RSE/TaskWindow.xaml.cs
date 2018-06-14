@@ -4,6 +4,7 @@ using RSE.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -39,6 +40,7 @@ namespace RSE
                 UpdateWindow();
             }
         }
+        
 
         public void UpdateAnswers(int currentExerciseId, string UserAnswer)
         {
@@ -58,13 +60,23 @@ namespace RSE
 
             if(addAnswer) Answers.Add(ans);
         }
-
+        
         public void UpdateWindow()
         {
             var nextExercise = Exercises.FirstOrDefault(e => e.Number == _currentExerciseId);
             var ans = Answers.FirstOrDefault(a => a.ExerciseId == nextExercise.Number);
 
-            TextBoxDesc.Text = nextExercise.Description;
+            TextBlockDesc.Text = nextExercise.Description;
+
+            if(nextExercise.ImgURL != "")
+            {
+                BitmapImage img = new BitmapImage();
+                img.BeginInit();
+                img.UriSource = new Uri(nextExercise.ImgURL);
+                img.EndInit();
+                DescURL.Source = img;
+            }
+            
             if (ans != null) TextBoxAnswer.Text = ans.UserAnswer;
             else TextBoxAnswer.Text = "";
         }

@@ -1,4 +1,8 @@
-﻿using System;
+﻿using RSE.Core;
+using RSE.Core.Helpers;
+using RSE.Core.Interfaces;
+using RSE.Core.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,21 +14,21 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using RSE.Core;
-using RSE.Core.Helpers;
-using RSE.Core.Interfaces;
-using RSE.Core.Models;
 
 namespace RSE
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для NewLoginWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class NewLoginWindow : Window
     {
+        public NewLoginWindow()
+        {
+            InitializeComponent();
+        }
         IRepository _repo = Factory.Instance.GetRepository();
+        public event Action RegistrationFinished;
 
         private void ButtonRegister_Click(object sender, RoutedEventArgs e)
         {
@@ -33,17 +37,18 @@ namespace RSE
                 Login = TextBox_Login.Text,
                 Password = PasswordHelper.GetHash(PasswordBox_Password.Password)
             };
-            string errMessage = "";
-            if (_repo.RegisterUser(user, ref errMessage))
+
+            try
             {
-                ChooseVariant chooseVariant = new ChooseVariant();
-                chooseVariant.Show();
-                Hide();
+                _repo.RegisterUser(user);
+                RegistrationFinished?.Invoke();
+                Close();
             }
-            else
+            catch
             {
-                MessageBox.Show(errMessage);
+                MessageBox.Show("An error occured trying to save new user");
             }
+
         }
 
         private void ButtonLogin_Click(object sender, RoutedEventArgs e)
@@ -54,7 +59,7 @@ namespace RSE
                 chooseVariant.Show();
                 Hide();
             }
-           
+
         }
     }
 }

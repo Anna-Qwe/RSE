@@ -5,17 +5,43 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RSE"
         mc:Ignorable="d"
-        Height="600" Width="800" HorizontalAlignment="Center" VerticalAlignment="Center" >
-    <Grid Margin="-2,0,-4.667,-4.333" Height="600" VerticalAlignment="Top" HorizontalAlignment="Left" Width="800" Background="#FF54CEDF">
-        <Grid Height="500" VerticalAlignment="Top" HorizontalAlignment="Left" Width="744" Background="White" Margin="24,47,0,0">
-        </Grid>
-        <TextBox  Name="TextBoxDesc" Height="291" Margin="45,72,0,237" VerticalAlignment="Center"  TextWrapping="Wrap" Width="702" HorizontalAlignment="Left" Background="White" RenderTransformOrigin="0.655,-1.374" DataContext="{Binding Exercise.Description}" BorderBrush="#FF54CEDF"/>
-        <Image Width="100" Source="{Binding Path=ImgURL}"/>
-        <TextBox Name="TextBoxAnswer" Height="45" Margin="279,376,0,179" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="237" HorizontalAlignment="Left"  Background="White" BorderBrush="#FF54CEDF" />
-        <Button Click="ButtonNext_Click"  Content="Next task" Margin="518,432,0,0" VerticalAlignment="Top" Height="45" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="161" HorizontalAlignment="Left"  Background="#FF54CEDF" Foreground="White" BorderBrush="#FF54CEDF" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="24"/>
-        <Button Click="ButtonPrevious_Click" Content="Previous task" Margin="113,432,0,0" VerticalAlignment="Top" Height="45" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="161" HorizontalAlignment="Left"  Background="#FF54CEDF" Foreground="White" BorderBrush="#FF54CEDF" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="24" RenderTransformOrigin="0.654,0.385"/>
-        <Button Click="ButtonFinish_Click" Content="Finish" Margin="323,487,0,0" VerticalAlignment="Top" Height="45" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="161" HorizontalAlignment="Left"  Background="#FF54CEDF" Foreground="White" BorderBrush="#FF54CEDF" FontWeight="UltraBold" FontFamily="Times New Roman" FontSize="24"/>
+       WindowStyle="None" 
+Height="400" Width="500" HorizontalAlignment="Center" VerticalAlignment="Center" Background="LightBlue" >
+  
+    <Grid >
+        <Grid.RowDefinitions >
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="120"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="It's time to work!" FontSize="24" Margin="5" FontFamily="Showcard Gothic" Foreground="#FF4E299E"/>
+        <TextBlock Grid.ColumnSpan="2" HorizontalAlignment="Right" Margin="5" Grid.Row="1" Text="We believe, you can do it perfectly" 
+TextWrapping="Wrap" FontSize="24" FontFamily="Leelawadee UI" Foreground="#FF8934B0" />
+        
+        <TextBlock Text="{Binding Exercise.Description}" Name="TextBlockDesc" Height="150" Grid.Row="2" TextWrapping="Wrap" Grid.ColumnSpan="2" Margin="8"/>
+        <Image  Name="DescURL" Grid.Row="2" Grid.Column="1" Width="64"
+       Height="64"
+       VerticalAlignment="Top"
+       Margin="0,0,0,0"
+       HorizontalAlignment="Center"  />
+        <TextBlock Text="Your answer:" VerticalAlignment="Top" HorizontalAlignment="Right" FontFamily="Segoe UI Semilight" 
+Margin="10" Grid.Row="3" Foreground="#FF9525C9" FontSize="22" Name="TextBlockAnswer" />
+  
 
+        <TextBox Name="TextBoxAnswer" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Left" BorderBrush="#FF9525C9" BorderThickness="1" 
+Margin="10" Grid.Row="3" Height="30" Width="120"/>
+
+        <StackPanel Orientation="Horizontal" Margin="0 0 0 80" Grid.Row="4" Grid.ColumnSpan="2" HorizontalAlignment="Center" >
+            <Button Margin="0 0 20 0" Content="Previous" Click="ButtonPrevious_Click" FontSize="14" Background="#FF4E299E" FontFamily="Segoe UI" Width="90"/>
+            <Button Margin="0 0 20 0" Content="Next" Click="ButtonNext_Click" FontSize="14" FontFamily="Segoe UI" Background="#FF4E299E" Width="90"/>
+            <Button Margin="0 0 20 0" Click="ButtonFinish_Click" Content="Finish" FontSize="14" FontFamily="Segoe UI" Width="90" BorderBrush="#00673AB7" Background="#FF8934B0"/>
+        </StackPanel>
     </Grid>
 
 </Window>
